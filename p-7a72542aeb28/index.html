@@ -803,6 +803,26 @@
       }
     }
   .btn-ghost{background:transparent!important;color:inherit!important;border:2px solid currentColor!important;opacity:.85;margin-top:8px}</style>
+<style>
+@media (min-width:900px){
+body{max-width:none!important}
+section,.top-bar{padding-left:max(var(--px),calc((100% - 1080px)/2))!important;padding-right:max(var(--px),calc((100% - 1080px)/2))!important}
+.welcome h1,.welcome-sub{max-width:760px;margin-left:auto;margin-right:auto}
+.steps{display:grid!important;grid-template-columns:repeat(3,1fr);gap:18px}
+#aplikacja>div{max-width:900px!important}
+#aplikacja .os-grid{grid-template-columns:1fr 1fr!important}
+.main-card{display:flow-root;text-align:left;max-width:900px;margin:0 auto;padding:36px 40px!important}
+.main-card .main-cover{float:left;width:300px;margin:0 40px 0 0!important}
+.main-card h2{padding-top:40px}
+.bonus-grid{display:grid!important;grid-template-columns:repeat(3,1fr);gap:22px}
+.menu-grid{grid-template-columns:repeat(2,1fr)!important;gap:20px}
+.planner-box,.shopping-wrap,.copy-wrap{max-width:900px;margin-left:auto;margin-right:auto}
+.section-lead{max-width:720px;margin-left:auto;margin-right:auto}
+.btn-stack{max-width:420px}
+}
+@media (min-width:1200px){.bonus-grid{grid-template-columns:repeat(4,1fr)}}
+.solo-pc{display:none}@media (min-width:900px) and (hover:hover){.solo-pc{display:block}}
+</style>
 </head>
 <body>
 
@@ -848,10 +868,10 @@
 <h2 style="margin:0 0 6px">📱 Miej poradnik zawsze pod ręką</h2>
 <p style="margin:0 0 14px">Dodaj tę stronę do ekranu głównego telefonu — otworzysz ją jednym dotknięciem, jak aplikację, bez szukania maila. Wszystko przeczytasz tutaj, bez pobierania.</p>
 <button id="instalar" class="btn" style="display:none;width:100%;margin-bottom:14px">⬇️ Zainstaluj aplikację</button>
-<div style="display:grid;gap:12px">
+<div class="os-grid" style="display:grid;gap:12px">
 <div style="background:#FFF6E3;border-radius:12px;padding:12px 14px"><b>iPhone (Safari)</b><ol style="margin:6px 0 0 18px;padding:0"><li>Stuknij <b>Udostępnij</b> (kwadrat ze strzałką w górę) na dole ekranu.</li><li>Przewiń i wybierz <b>Do ekranu początkowego</b>.</li><li>Stuknij <b>Dodaj</b>. Gotowe!</li></ol></div>
 <div style="background:#E6F2EA;border-radius:12px;padding:12px 14px"><b>Android (Chrome)</b><ol style="margin:6px 0 0 18px;padding:0"><li>Stuknij <b>⋮</b> w prawym górnym rogu.</li><li>Wybierz <b>Zainstaluj aplikację</b> albo <b>Dodaj do ekranu głównego</b>.</li><li>Potwierdź. Ikona pojawi się na ekranie telefonu.</li></ol></div>
-</div></div></section>
+</div><p class="solo-pc" style="margin:14px 0 0;font-size:14px">💻 <b>Na komputerze:</b> naciśnij <b>Ctrl+D</b> (na Macu <b>⌘+D</b>), żeby zapisać stronę w zakładkach. W Chrome możesz też kliknąć ikonę instalacji po prawej stronie paska adresu.</p></div></section>
 <script>if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js');addEventListener('beforeinstallprompt',function(e){e.preventDefault();var b=document.getElementById('instalar');b.style.display='block';b.onclick=function(){e.prompt();b.style.display='none'}});</script>
 <section class="section-dark main-product" id="glowny-poradnik">
     <p class="eyebrow">Twój główny poradnik</p>
