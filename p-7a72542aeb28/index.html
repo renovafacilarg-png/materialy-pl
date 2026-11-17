@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl" dir="ltr">
 <head>
-<meta name="robots" content="noindex,nofollow"><style>html,body{overflow-x:hidden;max-width:100vw}</style>
+<meta name="robots" content="noindex,nofollow"><style>html,body{overflow-x:hidden;max-width:100vw}</style><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-180.png"><meta name="theme-color" content="#1E6B35"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Śniadaniówki">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
@@ -802,7 +802,7 @@
         padding: 0;
       }
     }
-  </style>
+  .btn-ghost{background:transparent!important;color:inherit!important;border:2px solid currentColor!important;opacity:.85;margin-top:8px}</style>
 </head>
 <body>
 
@@ -844,14 +844,23 @@
   </section>
 
   <!-- 2 · PRODUCTO PRINCIPAL -->
-  <section class="section-dark main-product" id="glowny-poradnik">
+  <section class="section-light" id="aplikacja" style="padding:28px 18px"><div style="max-width:560px;margin:0 auto;background:#fff;border-radius:18px;padding:20px;box-shadow:0 6px 20px rgba(0,0,0,.07)">
+<h2 style="margin:0 0 6px">📱 Miej poradnik zawsze pod ręką</h2>
+<p style="margin:0 0 14px">Dodaj tę stronę do ekranu głównego telefonu — otworzysz ją jednym dotknięciem, jak aplikację, bez szukania maila. Wszystko przeczytasz tutaj, bez pobierania.</p>
+<button id="instalar" class="btn" style="display:none;width:100%;margin-bottom:14px">⬇️ Zainstaluj aplikację</button>
+<div style="display:grid;gap:12px">
+<div style="background:#FFF6E3;border-radius:12px;padding:12px 14px"><b>iPhone (Safari)</b><ol style="margin:6px 0 0 18px;padding:0"><li>Stuknij <b>Udostępnij</b> (kwadrat ze strzałką w górę) na dole ekranu.</li><li>Przewiń i wybierz <b>Do ekranu początkowego</b>.</li><li>Stuknij <b>Dodaj</b>. Gotowe!</li></ol></div>
+<div style="background:#E6F2EA;border-radius:12px;padding:12px 14px"><b>Android (Chrome)</b><ol style="margin:6px 0 0 18px;padding:0"><li>Stuknij <b>⋮</b> w prawym górnym rogu.</li><li>Wybierz <b>Zainstaluj aplikację</b> albo <b>Dodaj do ekranu głównego</b>.</li><li>Potwierdź. Ikona pojawi się na ekranie telefonu.</li></ol></div>
+</div></div></section>
+<script>if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js');addEventListener('beforeinstallprompt',function(e){e.preventDefault();var b=document.getElementById('instalar');b.style.display='block';b.onclick=function(){e.prompt();b.style.display='none'}});</script>
+<section class="section-dark main-product" id="glowny-poradnik">
     <p class="eyebrow">Twój główny poradnik</p>
     <div class="main-card">
       <img class="main-cover" src="img/portada-glowna.webp" alt="Okładka poradnika Wesołe Śniadaniówki" width="560" height="560">
       <h2>Wesołe Śniadaniówki</h2>
       <p>Ponad 200 pomysłów na drugie śniadanie gotowych w mniej niż 15 minut. Wybierz format, który jest dla Ciebie wygodniejszy:</p>
       <div class="btn-stack">
-        <a class="btn" href="pdf/Wesole-Sniadaniowki.pdf" download>Pobierz PDF na telefon</a>
+        <a class="btn" href="czytaj/Wesole-Sniadaniowki.html">📖 Czytaj online</a> <a class="btn btn-sm btn-ghost" href="pdf/Wesole-Sniadaniowki.pdf" download>Pobierz PDF na telefon</a>
       </div>
     </div>
   </section>
@@ -870,7 +879,7 @@
         <div class="bonus-body">
           <span class="bonus-tag">Bonus #1</span>
           <h3>Bułeczki, pizze i słodkości bez cukru i glutenu</h3>
-          <a class="btn btn-sm" href="pdf/Bonus-1.pdf" download>Pobierz PDF</a>
+          <a class="btn btn-sm" href="czytaj/Bonus-1.html">📖 Czytaj online</a> <a class="btn btn-sm btn-ghost" href="pdf/Bonus-1.pdf" download>Pobierz PDF</a>
         </div>
       </article>
 
@@ -881,7 +890,7 @@
         <div class="bonus-body">
           <span class="bonus-tag">Bonus #2</span>
           <h3>Praktyczny poradnik planowania i mrożenia posiłków</h3>
-          <a class="btn btn-sm" href="pdf/Bonus-2.pdf" download>Pobierz PDF</a>
+          <a class="btn btn-sm" href="czytaj/Bonus-2.html">📖 Czytaj online</a> <a class="btn btn-sm btn-ghost" href="pdf/Bonus-2.pdf" download>Pobierz PDF</a>
         </div>
       </article>
 
@@ -892,7 +901,7 @@
         <div class="bonus-body">
           <span class="bonus-tag">Bonus #3</span>
           <h3>Przepisy z zamiennikami dla alergików</h3>
-          <a class="btn btn-sm" href="pdf/Bonus-3.pdf" download>Pobierz PDF</a>
+          <a class="btn btn-sm" href="czytaj/Bonus-3.html">📖 Czytaj online</a> <a class="btn btn-sm btn-ghost" href="pdf/Bonus-3.pdf" download>Pobierz PDF</a>
         </div>
       </article>
 
@@ -903,7 +912,7 @@
         <div class="bonus-body">
           <span class="bonus-tag">Bonus #4</span>
           <h3>Pyszne i zdrowe słodkości</h3>
-          <a class="btn btn-sm" href="pdf/Bonus-4.pdf" download>Pobierz PDF</a>
+          <a class="btn btn-sm" href="czytaj/Bonus-4.html">📖 Czytaj online</a> <a class="btn btn-sm btn-ghost" href="pdf/Bonus-4.pdf" download>Pobierz PDF</a>
         </div>
       </article>
 
@@ -914,7 +923,7 @@
         <div class="bonus-body">
           <span class="bonus-tag">Bonus #5</span>
           <h3>Mój Niejadek: poradnik o wybiórczości pokarmowej</h3>
-          <a class="btn btn-sm" href="pdf/Bonus-5.pdf" download>Pobierz PDF</a>
+          <a class="btn btn-sm" href="czytaj/Bonus-5.html">📖 Czytaj online</a> <a class="btn btn-sm btn-ghost" href="pdf/Bonus-5.pdf" download>Pobierz PDF</a>
         </div>
       </article>
 
@@ -925,7 +934,7 @@
         <div class="bonus-body">
           <span class="bonus-tag">Bonus #6</span>
           <h3>Domowe soki i koktajle</h3>
-          <a class="btn btn-sm" href="pdf/Bonus-6.pdf" download>Pobierz PDF</a>
+          <a class="btn btn-sm" href="czytaj/Bonus-6.html">📖 Czytaj online</a> <a class="btn btn-sm btn-ghost" href="pdf/Bonus-6.pdf" download>Pobierz PDF</a>
         </div>
       </article>
 
@@ -936,7 +945,7 @@
         <div class="bonus-body">
           <span class="bonus-tag">Bonus #7</span>
           <h3>Jak pakować śniadaniówki: praktyczny poradnik</h3>
-          <a class="btn btn-sm" href="pdf/Bonus-7.pdf" download>Pobierz PDF</a>
+          <a class="btn btn-sm" href="czytaj/Bonus-7.html">📖 Czytaj online</a> <a class="btn btn-sm btn-ghost" href="pdf/Bonus-7.pdf" download>Pobierz PDF</a>
         </div>
       </article>
     </div>
@@ -955,7 +964,7 @@
         </div>
         <h3>Menu + lista zakupów</h3>
         <p>Szybki start: sprawdzone placuszki, muffinki i bułeczki na cały tydzień.</p>
-        <a class="btn btn-sm" href="pdf/Wesole-Sniadaniowki.pdf#page=429">Pobierz PDF</a>
+        <a class="btn btn-sm" href="czytaj/Wesole-Sniadaniowki.html#tydzien-1">Pobierz PDF</a>
       </article>
 
       <article class="menu-card">
@@ -964,7 +973,7 @@
         </div>
         <h3>Menu + lista zakupów</h3>
         <p>Wytrawne i słodkie propozycje, które łatwo zapakować do pudełka.</p>
-        <a class="btn btn-sm" href="pdf/Wesole-Sniadaniowki.pdf#page=432">Pobierz PDF</a>
+        <a class="btn btn-sm" href="czytaj/Wesole-Sniadaniowki.html#tydzien-2">Pobierz PDF</a>
       </article>
 
       <article class="menu-card">
@@ -973,7 +982,7 @@
         </div>
         <h3>Menu + lista zakupów</h3>
         <p>Pomysły z warzywami i owocami na zabiegane poranki.</p>
-        <a class="btn btn-sm" href="pdf/Wesole-Sniadaniowki.pdf#page=435">Pobierz PDF</a>
+        <a class="btn btn-sm" href="czytaj/Wesole-Sniadaniowki.html#tydzien-3">Pobierz PDF</a>
       </article>
 
       <article class="menu-card">
@@ -982,7 +991,7 @@
         </div>
         <h3>Menu + lista zakupów</h3>
         <p>Zestaw na czwarty tydzień z prostych składników ze sklepu obok.</p>
-        <a class="btn btn-sm" href="pdf/Wesole-Sniadaniowki.pdf#page=438">Pobierz PDF</a>
+        <a class="btn btn-sm" href="czytaj/Wesole-Sniadaniowki.html#tydzien-4">Pobierz PDF</a>
       </article>
     </div>
   </section>
