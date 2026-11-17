@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+<head>
+<meta name="robots" content="noindex,nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Wesołe Śniadaniówki — Twoje materiały</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --creme: #FFF6E3;
+      --creme-dark: #F3E4C6;
+      --creme-line: #E8D6B3;
+      --marrom: #5A3522;
+      --marrom-light: #7A5540;
+      --marrom-soft: #9A7A64;
+      --laranja: #FF6B4A;
+      --laranja-dark: #D94B2B;
+      --laranja-soft: #FFE9E2;
+      --verde: #1E6B35;
+      --verde-dark: #17552A;
+      --garantia: #1A9940;
+      --preto: #1E1208;
+      --branco: #FFFFFF;
+      --r-sm: 12px;
+      --r-md: 18px;
+      --r-lg: 24px;
+      --r-xl: 30px;
+      --sh-1: 0 1px 3px rgba(90, 53, 34, .06), 0 4px 16px rgba(90, 53, 34, .06);
+      --sh-2: 0 2px 6px rgba(90, 53, 34, .07), 0 12px 32px rgba(90, 53, 34, .10);
+      --sh-3: 0 4px 12px rgba(90, 53, 34, .10), 0 20px 48px rgba(90, 53, 34, .14);
+      --px: 17px;
+    }
+
+    html {
+      font-size: 17px;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background: var(--creme);
+      color: var(--marrom);
+      line-height: 1.6;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 460px;
+      margin: 0 auto;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    h1, h2, h3, .section-title {
+      font-family: 'Bricolage Grotesque', 'Plus Jakarta Sans', system-ui, sans-serif;
+      letter-spacing: -.035em;
+      text-wrap: balance;
+    }
+
+    h1 {
+      font-size: clamp(30px, 8.6vw, 38px);
+      font-weight: 800;
+      line-height: 1.06;
+    }
+
+    h2 {
+      font-size: clamp(24px, 6.8vw, 30px);
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    h3 {
+      font-weight: 800;
+    }
+
+    p {
+      text-wrap: pretty;
+    }
+
+    em {
+      font-style: normal;
+      background-image: linear-gradient(transparent 60%, rgba(255, 107, 74, .3) 60%);
+      color: var(--marrom);
+      padding: 0 2px;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--laranja-dark);
+      outline-offset: 2px;
+    }
+
+    /* Top bar */
+    .top-bar {
+      background: var(--laranja);
+      color: #fff;
+      text-align: center;
+      padding: 11px var(--px);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      line-height: 1.4;
+    }
+
+    .top-dot {
+      width: 6px;
+      height: 6px;
+      background: rgba(255, 255, 255, .75);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      min-height: 48px;
+      background: var(--verde);
+      background-image: linear-gradient(180deg, rgba(255, 255, 255, .14), rgba(255, 255, 255, 0));
+      color: #fff;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 800;
+      padding: 16px 18px;
+      border-radius: 999px;
+      border: 2px solid var(--marrom);
+      box-shadow: 3px 3px 0 var(--marrom);
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      line-height: 1.25;
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+
+    .btn:hover {
+      transform: translate(1px, 1px);
+      box-shadow: 1px 1px 0 var(--marrom);
+    }
+
+    .btn:active {
+      transform: scale(.98);
+    }
+
+    .btn-laranja {
+      background-color: var(--laranja);
+      background-image: linear-gradient(180deg, rgba(255, 255, 255, .2), rgba(255, 255, 255, 0));
+      color: #fff;
+    }
+
+    .btn-creme {
+      background: var(--creme);
+      color: var(--marrom);
+      background-image: none;
+    }
+
+    .btn-sm {
+      min-height: 44px;
+      padding: 12px 16px;
+      font-size: 13.5px;
+    }
+
+    /* Sections */
+    section {
+      padding: 48px var(--px);
+    }
+
+    .section-dark {
+      background: radial-gradient(120% 60% at 100% 0%, #7A4B30 0%, var(--marrom) 60%);
+      color: #fff;
+      border-radius: 34px 34px 0 0;
+      margin-top: -28px;
+      position: relative;
+      z-index: 1;
+      padding-top: 56px;
+      padding-bottom: 68px;
+    }
+
+    .section-light {
+      background: var(--creme);
+      border-radius: 34px 34px 0 0;
+      margin-top: -28px;
+      position: relative;
+      z-index: 1;
+      padding-top: 56px;
+      padding-bottom: 68px;
+    }
+
+    .eyebrow {
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--laranja-dark);
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .section-dark .eyebrow {
+      color: rgba(255, 255, 255, .68);
+    }
+
+    /* 1. Bienvenida */
+    .welcome {
+      padding: 34px var(--px) 58px;
+      text-align: center;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    }
+
+    .welcome::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      left: -25%;
+      right: -25%;
+      top: -60px;
+      height: 360px;
+      background: radial-gradient(closest-side, rgba(255, 107, 74, .25), rgba(255, 107, 74, 0));
+    }
+
+    .confirm-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--verde);
+      color: #fff;
+      font-size: 12.5px;
+      font-weight: 800;
+      padding: 8px 16px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 12px -6px rgba(30, 107, 53, .6);
+    }
+
+    .welcome h1 {
+      margin-bottom: 14px;
+    }
+
+    .welcome-sub {
+      font-size: 15.5px;
+      color: var(--marrom-light);
+      line-height: 1.65;
+      margin-bottom: 26px;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .step-card {
+      background: var(--branco);
+      border: 1px solid var(--creme-line);
+      border-radius: var(--r-md);
+      padding: 14px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      box-shadow: var(--sh-1);
+    }
+
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--laranja);
+      color: #fff;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .step-card > div {
+      min-width: 0;
+    }
+
+    .step-card h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--marrom);
+      margin-bottom: 2px;
+    }
+
+    .step-card p {
+      font-size: 13.5px;
+      color: var(--marrom-light);
+      line-height: 1.5;
+    }
+
+    /* 2. Producto principal */
+    .main-product {
+      text-align: center;
+    }
+
+    .main-card {
+      background: var(--creme);
+      color: var(--marrom);
+      border-radius: var(--r-xl);
+      padding: 24px 20px 26px;
+      box-shadow: var(--sh-3);
+      border: 2px solid var(--marrom);
+    }
+
+    .main-cover {
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto 18px;
+      border-radius: var(--r-md);
+      border: 2px solid var(--marrom);
+      box-shadow: 5px 5px 0 var(--laranja);
+      background: var(--branco);
+    }
+
+    .main-card h2 {
+      margin-bottom: 8px;
+    }
+
+    .main-card p {
+      font-size: 14.5px;
+      color: var(--marrom-light);
+      margin-bottom: 20px;
+    }
+
+    .btn-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* 3. Bonos */
+    .bonuses-section {
+      text-align: center;
+    }
+
+    .bonuses-section h2 {
+      margin-bottom: 8px;
+    }
+
+    .section-lead {
+      font-size: 15px;
+      color: var(--marrom-light);
+      margin-bottom: 24px;
+    }
+
+    .section-dark .section-lead {
+      color: rgba(255, 255, 255, .78);
+    }
+
+    .bonus-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .bonus-card {
+      background: var(--branco);
+      border: 1px solid var(--creme-line);
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      box-shadow: var(--sh-2);
+      text-align: left;
+    }
+
+    .bonus-img-wrap {
+      background: var(--creme-dark);
+      padding: 14px 14px 0;
+      border-bottom: 1px solid var(--creme-line);
+    }
+
+    .bonus-img-wrap img {
+      width: 100%;
+      height: 210px;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+
+    .bonus-body {
+      padding: 18px 20px 22px;
+      text-align: center;
+    }
+
+    .bonus-tag {
+      display: inline-block;
+      background: var(--laranja);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .bonus-body h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16.5px;
+      font-weight: 800;
+      color: var(--marrom);
+      line-height: 1.32;
+      margin-bottom: 14px;
+    }
+
+    /* 4. Menus semanales */
+    .menus-section {
+      text-align: center;
+    }
+
+    .menus-section h2 {
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      text-align: left;
+    }
+
+    .menu-card {
+      background: var(--creme);
+      color: var(--marrom);
+      border-radius: var(--r-lg);
+      padding: 18px 18px 20px;
+      border: 2px solid var(--marrom);
+      box-shadow: 4px 4px 0 var(--laranja);
+    }
+
+    .menu-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .menu-badge {
+      background: var(--laranja-soft);
+      color: var(--laranja-dark);
+      font-size: 11.5px;
+      font-weight: 800;
+      padding: 4px 11px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .menu-card h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 17px;
+      margin-bottom: 6px;
+    }
+
+    .menu-card p {
+      font-size: 13.5px;
+      color: var(--marrom-light);
+      margin-bottom: 14px;
+    }
+
+    /* 5. Planificador interactivo */
+    .planner-section {
+      text-align: center;
+    }
+
+    .planner-section h2 {
+      margin-bottom: 8px;
+    }
+
+    .planner-box {
+      background: var(--branco);
+      border: 2px solid var(--marrom);
+      border-radius: var(--r-xl);
+      padding: 20px 16px 22px;
+      box-shadow: 6px 6px 0 var(--laranja);
+      text-align: left;
+    }
+
+    .planner-actions-top {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .day-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      padding: 14px 0;
+      border-bottom: 1px solid var(--creme-line);
+    }
+
+    .day-row:last-of-type {
+      border-bottom: none;
+    }
+
+    .day-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--marrom);
+      margin-bottom: 6px;
+    }
+
+    .day-select {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      min-height: 48px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font: inherit;
+      font-size: max(1rem, 1em);
+      font-weight: 600;
+      color: var(--marrom);
+      background: var(--creme);
+      border: 1.5px solid var(--marrom);
+      border-radius: var(--r-sm);
+      padding: 10px 12px;
+      cursor: pointer;
+    }
+
+    .macros-box {
+      margin-top: 10px;
+      background: var(--laranja-soft);
+      border: 1px solid var(--creme-line);
+      border-radius: var(--r-sm);
+      padding: 10px 12px;
+      font-size: 12.5px;
+      color: var(--marrom);
+    }
+
+    .macros-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 12px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .macros-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    .macro-pill {
+      background: var(--branco);
+      border: 1px solid var(--creme-line);
+      border-radius: 8px;
+      padding: 5px 7px;
+      text-align: center;
+      font-size: 11.5px;
+      line-height: 1.3;
+    }
+
+    .macro-pill b {
+      display: block;
+      font-size: 13px;
+      color: var(--marrom);
+    }
+
+    .allergen-note {
+      margin-top: 7px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--laranja-dark);
+    }
+
+    .shopping-wrap {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 2px dashed var(--creme-line);
+    }
+
+    .shopping-wrap h3 {
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .shopping-hint {
+      font-size: 13px;
+      color: var(--marrom-light);
+      margin-bottom: 12px;
+    }
+
+    .shopping-list-box {
+      background: var(--creme);
+      border: 1px solid var(--creme-line);
+      border-radius: var(--r-md);
+      padding: 14px 16px;
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--marrom);
+      margin-bottom: 14px;
+      white-space: pre-line;
+    }
+
+    .shopping-empty {
+      color: var(--marrom-soft);
+      font-style: italic;
+    }
+
+    .copy-wrap {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .copy-status {
+      min-height: 22px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--verde);
+      text-align: center;
+      opacity: 0;
+      transition: opacity .15s ease;
+    }
+
+    .copy-button[data-copied] + .copy-status,
+    .copy-button[data-failed] + .copy-status {
+      opacity: 1;
+    }
+
+    .copy-button[data-failed] + .copy-status {
+      color: var(--laranja-dark);
+    }
+
+    /* 6. Actualizaciones mensuales */
+    .updates-section {
+      text-align: center;
+    }
+
+    .updates-card {
+      background: var(--creme);
+      color: var(--marrom);
+      border-radius: var(--r-xl);
+      padding: 26px 22px;
+      border: 2px solid var(--marrom);
+      box-shadow: var(--sh-3);
+    }
+
+    .updates-ico {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .updates-card h2 {
+      margin-bottom: 10px;
+    }
+
+    .updates-card p {
+      font-size: 15px;
+      color: var(--marrom-light);
+      line-height: 1.65;
+    }
+
+    /* 7. Ayuda / Garantia */
+    .help-section {
+      background: var(--garantia);
+      color: #fff;
+      border-radius: 34px 34px 0 0;
+      margin-top: -28px;
+      position: relative;
+      z-index: 1;
+      padding: 56px var(--px) 64px;
+      text-align: center;
+    }
+
+    .garantia-selo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, .16);
+      border: 1.5px solid rgba(255, 255, 255, .35);
+      border-radius: 999px;
+      padding: 8px 18px;
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .help-section h2 {
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    .help-section p {
+      font-size: 15px;
+      color: rgba(255, 255, 255, .92);
+      line-height: 1.68;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .contact-box {
+      background: rgba(255, 255, 255, .14);
+      border: 1.5px solid rgba(255, 255, 255, .28);
+      border-radius: var(--r-md);
+      padding: 18px 16px;
+      text-align: center;
+    }
+
+    .contact-box span {
+      display: block;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .8);
+      margin-bottom: 6px;
+    }
+
+    .contact-mail {
+      display: inline-block;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 800;
+      text-decoration: underline;
+      word-break: break-all;
+    }
+
+    footer {
+      background: var(--preto);
+      color: rgba(255, 255, 255, .52);
+      font-size: 12.5px;
+      text-align: center;
+      padding: 36px 20px;
+      line-height: 1.8;
+    }
+
+    footer strong {
+      color: rgba(255, 255, 255, .82);
+    }
+
+    @media (min-width: 760px) {
+      .menu-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @media print {
+      body {
+        max-width: 100%;
+        background: #fff;
+        color: #000;
+      }
+      .top-bar, .welcome, .main-product, .bonuses-section, .menus-section,
+      .updates-section, .help-section, footer, .planner-actions-top, .copy-wrap {
+        display: none !important;
+      }
+      .planner-section {
+        margin: 0;
+        padding: 0;
+        background: #fff;
+      }
+      .planner-box {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <span class="top-dot" aria-hidden="true"></span>
+    <span>DOSTĘP ODBLOKOWANY · WESOŁE ŚNIADANIÓWKI</span>
+    <span class="top-dot" aria-hidden="true"></span>
+  </div>
+
+  <!-- 1 · BIENVENIDA -->
+  <section class="welcome">
+    <div class="confirm-pill">✓ Twoje zamówienie jest potwierdzone</div>
+    <h1>Witaj w <em>Wesołych Śniadaniówkach</em>!</h1>
+    <p class="welcome-sub">Wszystkie Twoje materiały są już gotowe poniżej. Możesz z nich korzystać na telefonie albo wydrukować i powiesić na lodówce.</p>
+
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-num" aria-hidden="true">1</div>
+        <div>
+          <h3>Pobierz główny poradnik</h3>
+          <p>Wybierz wersję na telefon (wygodne czytanie w kuchni) albo wersję do druku.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num" aria-hidden="true">2</div>
+        <div>
+          <h3>Odbierz swoje 7 bonusów i menu</h3>
+          <p>Pobierz dodatki, gotowe jadłospisy na 4 tygodnie i listy zakupów do druku.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num" aria-hidden="true">3</div>
+        <div>
+          <h3>Ułóż własny tydzień w 2 minuty</h3>
+          <p>Wybierz przepisy od poniedziałku do piątku w planerze poniżej, a lista zakupów policzy się sama.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · PRODUCTO PRINCIPAL -->
+  <section class="section-dark main-product" id="glowny-poradnik">
+    <p class="eyebrow">Twój główny poradnik</p>
+    <div class="main-card">
+      <img class="main-cover" src="../../portadas/portada-glowna.webp" alt="Okładka poradnika Wesołe Śniadaniówki" width="560" height="560">
+      <h2>Wesołe Śniadaniówki</h2>
+      <p>Ponad 200 pomysłów na drugie śniadanie gotowych w mniej niż 15 minut. Wybierz format, który jest dla Ciebie wygodniejszy:</p>
+      <div class="btn-stack">
+        <a class="btn" href="pdf/Wesole-Sniadaniowki.pdf" download>Pobierz PDF na telefon</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · LOS 7 BONOS -->
+  <section class="section-light bonuses-section" id="bonusy">
+    <p class="eyebrow">Dodatkowe materiały w pakiecie</p>
+    <h2>Twoje 7 bonusów</h2>
+    <p class="section-lead">Każdy poradnik pobierzesz jednym kliknięciem w formacie PDF.</p>
+
+    <div class="bonus-grid">
+      <article class="bonus-card">
+        <div class="bonus-img-wrap">
+          <img src="../../img/b1-szybkie-przepisy.png" alt="Bułeczki, pizze i słodkości bez cukru i glutenu" loading="lazy">
+        </div>
+        <div class="bonus-body">
+          <span class="bonus-tag">Bonus #1</span>
+          <h3>Bułeczki, pizze i słodkości bez cukru i glutenu</h3>
+          <a class="btn btn-sm" href="pdf/Bonus-1.pdf" download>Pobierz PDF</a>
+        </div>
+      </article>
+
+      <article class="bonus-card">
+        <div class="bonus-img-wrap">
+          <img src="../../img/b2-mrozenie.png" alt="Praktyczny poradnik planowania i mrożenia posiłków" loading="lazy">
+        </div>
+        <div class="bonus-body">
+          <span class="bonus-tag">Bonus #2</span>
+          <h3>Praktyczny poradnik planowania i mrożenia posiłków</h3>
+          <a class="btn btn-sm" href="pdf/Bonus-2.pdf" download>Pobierz PDF</a>
+        </div>
+      </article>
+
+      <article class="bonus-card">
+        <div class="bonus-img-wrap">
+          <img src="../../img/b3-alergie.png" alt="Przepisy z zamiennikami dla alergików" loading="lazy">
+        </div>
+        <div class="bonus-body">
+          <span class="bonus-tag">Bonus #3</span>
+          <h3>Przepisy z zamiennikami dla alergików</h3>
+          <a class="btn btn-sm" href="pdf/Bonus-3.pdf" download>Pobierz PDF</a>
+        </div>
+      </article>
+
+      <article class="bonus-card">
+        <div class="bonus-img-wrap">
+          <img src="../../img/b4-slodkosci.png" alt="Pyszne i zdrowe słodkości" loading="lazy">
+        </div>
+        <div class="bonus-body">
+          <span class="bonus-tag">Bonus #4</span>
+          <h3>Pyszne i zdrowe słodkości</h3>
+          <a class="btn btn-sm" href="pdf/Bonus-4.pdf" download>Pobierz PDF</a>
+        </div>
+      </article>
+
+      <article class="bonus-card">
+        <div class="bonus-img-wrap">
+          <img src="../../img/b5-niejadek.png" alt="Mój Niejadek: poradnik o wybiórczości pokarmowej" loading="lazy">
+        </div>
+        <div class="bonus-body">
+          <span class="bonus-tag">Bonus #5</span>
+          <h3>Mój Niejadek: poradnik o wybiórczości pokarmowej</h3>
+          <a class="btn btn-sm" href="pdf/Bonus-5.pdf" download>Pobierz PDF</a>
+        </div>
+      </article>
+
+      <article class="bonus-card">
+        <div class="bonus-img-wrap">
+          <img src="../../img/b6-soczki.png" alt="Domowe soki i koktajle" loading="lazy">
+        </div>
+        <div class="bonus-body">
+          <span class="bonus-tag">Bonus #6</span>
+          <h3>Domowe soki i koktajle</h3>
+          <a class="btn btn-sm" href="pdf/Bonus-6.pdf" download>Pobierz PDF</a>
+        </div>
+      </article>
+
+      <article class="bonus-card">
+        <div class="bonus-img-wrap">
+          <img src="../../img/b7-sniadaniowki.png" alt="Jak pakować śniadaniówki: praktyczny poradnik" loading="lazy">
+        </div>
+        <div class="bonus-body">
+          <span class="bonus-tag">Bonus #7</span>
+          <h3>Jak pakować śniadaniówki: praktyczny poradnik</h3>
+          <a class="btn btn-sm" href="pdf/Bonus-7.pdf" download>Pobierz PDF</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 4 · MENÚS SEMANALES Y LISTAS DE COMPRAS -->
+  <section class="section-dark menus-section" id="menu-tygodniowe">
+    <p class="eyebrow">Gotowe do wydruku</p>
+    <h2>Menu tygodniowe i listy zakupów</h2>
+    <p class="section-lead">4 gotowe plany od poniedziałku do piątku z listą zakupów na każdy tydzień.</p>
+
+    <div class="menu-grid">
+      <article class="menu-card">
+        <div class="menu-card-head">
+          <span class="menu-badge">Tydzień 1</span>
+        </div>
+        <h3>Menu + lista zakupów</h3>
+        <p>Szybki start: sprawdzone placuszki, muffinki i bułeczki na cały tydzień.</p>
+        <a class="btn btn-sm" href="pdf/Wesole-Sniadaniowki.pdf#page=428">Pobierz PDF</a>
+      </article>
+
+      <article class="menu-card">
+        <div class="menu-card-head">
+          <span class="menu-badge">Tydzień 2</span>
+        </div>
+        <h3>Menu + lista zakupów</h3>
+        <p>Wytrawne i słodkie propozycje, które łatwo zapakować do pudełka.</p>
+        <a class="btn btn-sm" href="pdf/Wesole-Sniadaniowki.pdf#page=431">Pobierz PDF</a>
+      </article>
+
+      <article class="menu-card">
+        <div class="menu-card-head">
+          <span class="menu-badge">Tydzień 3</span>
+        </div>
+        <h3>Menu + lista zakupów</h3>
+        <p>Pomysły z warzywami i owocami na zabiegane poranki.</p>
+        <a class="btn btn-sm" href="pdf/Wesole-Sniadaniowki.pdf#page=434">Pobierz PDF</a>
+      </article>
+
+      <article class="menu-card">
+        <div class="menu-card-head">
+          <span class="menu-badge">Tydzień 4</span>
+        </div>
+        <h3>Menu + lista zakupów</h3>
+        <p>Zestaw na czwarty tydzień z prostych składników ze sklepu obok.</p>
+        <a class="btn btn-sm" href="pdf/Wesole-Sniadaniowki.pdf#page=437">Pobierz PDF</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- 5 · PLANIFICADOR SEMANAL INTERACTIVO -->
+  <section class="section-light planner-section" id="planer">
+    <p class="eyebrow">Twój interaktywny planer</p>
+    <h2>Zaplanuj tydzień i zbierz listę zakupów</h2>
+    <p class="section-lead">Wybierz przepis na każdy dzień od poniedziałku do piątku — zobaczysz wartości odżywcze i gotową, zsumowaną listę zakupów.</p>
+
+    <div class="planner-box">
+      <div class="planner-actions-top">
+        <button type="button" class="btn btn-laranja btn-sm" id="btn-random-week">Losuj tydzień</button>
+        <button type="button" class="btn btn-creme btn-sm" id="btn-clear-week">Wyczyść</button>
+      </div>
+
+      <form id="planner-form" aria-label="Planer tygodniowy od poniedziałku do piątku">
+        <div class="day-row" data-day="pon">
+          <label class="day-label" for="select-pon">Poniedziałek</label>
+          <select class="day-select" id="select-pon" name="pon"></select>
+          <div class="macros-box" id="macros-pon" hidden></div>
+        </div>
+
+        <div class="day-row" data-day="wt">
+          <label class="day-label" for="select-wt">Wtorek</label>
+          <select class="day-select" id="select-wt" name="wt"></select>
+          <div class="macros-box" id="macros-wt" hidden></div>
+        </div>
+
+        <div class="day-row" data-day="sr">
+          <label class="day-label" for="select-sr">Środa</label>
+          <select class="day-select" id="select-sr" name="sr"></select>
+          <div class="macros-box" id="macros-sr" hidden></div>
+        </div>
+
+        <div class="day-row" data-day="czw">
+          <label class="day-label" for="select-czw">Czwartek</label>
+          <select class="day-select" id="select-czw" name="czw"></select>
+          <div class="macros-box" id="macros-czw" hidden></div>
+        </div>
+
+        <div class="day-row" data-day="pt">
+          <label class="day-label" for="select-pt">Piątek</label>
+          <select class="day-select" id="select-pt" name="pt"></select>
+          <div class="macros-box" id="macros-pt" hidden></div>
+        </div>
+      </form>
+
+      <div class="shopping-wrap">
+        <h3>Twoja lista zakupów</h3>
+        <p class="shopping-hint">Składniki z wybranych dni sumują się automatycznie.</p>
+        <div class="shopping-list-box" id="shopping-list-text"></div>
+
+        <div class="copy-wrap">
+          <button type="button" class="btn btn-sm copy-button" command="--copy" commandfor="shopping-list-text">Kopiuj listę zakupów</button>
+          <span class="copy-status" role="status"></span>
+          <button type="button" class="btn btn-laranja btn-sm" id="btn-print-list">Drukuj listę</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · ACTUALIZACIONES MENSUALES -->
+  <!-- 7 · AYUDA -->
+  <footer>
+    <strong>Wesołe Śniadaniówki</strong><br>
+    Materiały cyfrowe do użytku domowego
+  </footer>
+
+  <!-- JSON incrustado de recetas (10 recetas de prueba con el esquema pedido) -->
+  <script id="recipes-data" type="application/json">[{"id": "landing-placuszki-bananowe-z-twarozkiem", "nombre": "Placuszki bananowe z twarożkiem", "minutos": 10, "porciones": 1, "kcal": 309, "proteina_g": 17.6, "carbos_g": 42.9, "azucar_g": 16.7, "grasa_g": 8.5, "fibra_g": 5.1, "alergenos": ["Jaja", "Mleko", "Gluten"], "ingredientes": [{"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "banan", "cantidad": 120, "unidad": "g"}, {"nombre": "płatki owsiane", "cantidad": 20, "unidad": "g"}, {"nombre": "twaróg półtłusty", "cantidad": 40, "unidad": "g"}]}, {"id": "landing-mini-placuszki-warzywne", "nombre": "Mini placuszki warzywne", "minutos": 15, "porciones": 2, "kcal": 212, "proteina_g": 9.9, "carbos_g": 19.1, "azucar_g": 4.5, "grasa_g": 10.8, "fibra_g": 2.6, "alergenos": ["Jaja", "Gluten"], "ingredientes": [{"nombre": "marchew", "cantidad": 100, "unidad": "g"}, {"nombre": "cukinia", "cantidad": 150, "unidad": "g"}, {"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 30, "unidad": "g"}, {"nombre": "natka pietruszki", "cantidad": 5, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}]}, {"id": "landing-babeczki-z-kurczakiem", "nombre": "Babeczki z kurczakiem", "minutos": 30, "porciones": 2, "kcal": 294, "proteina_g": 31.5, "carbos_g": 12.5, "azucar_g": 0.8, "grasa_g": 12.2, "fibra_g": 0.4, "alergenos": ["Jaja", "Mleko", "Gluten"], "ingredientes": [{"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "śmietana 18%", "cantidad": 20, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 20, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 30, "unidad": "g"}, {"nombre": "pierś z kurczaka ugotowana", "cantidad": 140, "unidad": "g"}]}, {"id": "landing-buleczki-ziemniaczane-z-kurczakiem", "nombre": "Bułeczki ziemniaczane z kurczakiem", "minutos": 35, "porciones": 3, "kcal": 269, "proteina_g": 16.0, "carbos_g": 35.9, "azucar_g": 0.9, "grasa_g": 6.4, "fibra_g": 2.2, "alergenos": ["Jaja", "Gluten"], "ingredientes": [{"nombre": "ziemniaki ugotowane", "cantidad": 250, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 75, "unidad": "g"}, {"nombre": "pierś z kurczaka ugotowana", "cantidad": 100, "unidad": "g"}]}, {"id": "landing-mini-pizze-na-chlebie", "nombre": "Mini pizze na chlebie", "minutos": 15, "porciones": 2, "kcal": 255, "proteina_g": 14.8, "carbos_g": 29.5, "azucar_g": 4.5, "grasa_g": 8.8, "fibra_g": 4.4, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "chleb pełnoziarnisty", "cantidad": 120, "unidad": "g"}, {"nombre": "passata pomidorowa", "cantidad": 45, "unidad": "g"}, {"nombre": "mozzarella", "cantidad": 60, "unidad": "g"}, {"nombre": "pomidor", "cantidad": 60, "unidad": "g"}]}, {"id": "landing-pieczone-pierozki-z-kurczakiem", "nombre": "Pieczone pierożki z kurczakiem", "minutos": 40, "porciones": 3, "kcal": 260, "proteina_g": 15.0, "carbos_g": 34.8, "azucar_g": 3.9, "grasa_g": 6.4, "fibra_g": 2.5, "alergenos": ["Gluten", "Mleko", "Jaja"], "ingredientes": [{"nombre": "batat ugotowany", "cantidad": 200, "unidad": "g"}, {"nombre": "masło", "cantidad": 15, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 90, "unidad": "g"}, {"nombre": "pierś z kurczaka ugotowana", "cantidad": 100, "unidad": "g"}, {"nombre": "jajko", "cantidad": 30, "unidad": "g"}]}, {"id": "landing-krokieciki-ziemniaczane-z-kurczakiem", "nombre": "Krokieciki ziemniaczane z kurczakiem", "minutos": 35, "porciones": 3, "kcal": 261, "proteina_g": 19.9, "carbos_g": 30.0, "azucar_g": 2.0, "grasa_g": 6.5, "fibra_g": 2.4, "alergenos": ["Jaja", "Gluten", "Mleko"], "ingredientes": [{"nombre": "ziemniaki ugotowane", "cantidad": 300, "unidad": "g"}, {"nombre": "pierś z kurczaka ugotowana", "cantidad": 120, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 30, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "bułka tarta", "cantidad": 40, "unidad": "g"}]}, {"id": "placuszki-jablkowe-z-cynamonem", "nombre": "Placuszki jabłkowe z cynamonem", "minutos": 15, "porciones": 3, "kcal": 243, "proteina_g": 8.3, "carbos_g": 36.4, "azucar_g": 8.9, "grasa_g": 7.0, "fibra_g": 2.3, "alergenos": ["Mleko", "Jaja", "Gluten"], "ingredientes": [{"nombre": "jabłko", "cantidad": 180, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 100, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}]}, {"id": "placuszki-bananowe-z-platkami-owsianymi", "nombre": "Placuszki bananowe z płatkami owsianymi", "minutos": 15, "porciones": 3, "kcal": 285, "proteina_g": 11.3, "carbos_g": 38.2, "azucar_g": 9.5, "grasa_g": 10.2, "fibra_g": 4.9, "alergenos": ["Mleko", "Jaja", "Gluten"], "ingredientes": [{"nombre": "banan", "cantidad": 180, "unidad": "g"}, {"nombre": "płatki owsiane", "cantidad": 100, "unidad": "g"}, {"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 100, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}]}, {"id": "placuszki-gruszkowe-na-kefirze", "nombre": "Placuszki gruszkowe na kefirze", "minutos": 15, "porciones": 3, "kcal": 237, "proteina_g": 7.7, "carbos_g": 37.2, "azucar_g": 8.2, "grasa_g": 6.5, "fibra_g": 2.8, "alergenos": ["Mleko", "Jaja", "Gluten"], "ingredientes": [{"nombre": "gruszka", "cantidad": 180, "unidad": "g"}, {"nombre": "kefir", "cantidad": 150, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 100, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}]}, {"id": "placki-z-cukinii-i-koperku", "nombre": "Placki z cukinii i koperku", "minutos": 15, "porciones": 3, "kcal": 171, "proteina_g": 6.4, "carbos_g": 23.8, "azucar_g": 2.6, "grasa_g": 5.7, "fibra_g": 1.8, "alergenos": ["Jaja", "Gluten"], "ingredientes": [{"nombre": "cukinia", "cantidad": 300, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 80, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}]}, {"id": "placki-marchewkowe-z-twarogiem", "nombre": "Placki marchewkowe z twarogiem", "minutos": 15, "porciones": 3, "kcal": 248, "proteina_g": 16.7, "carbos_g": 27.0, "azucar_g": 6.0, "grasa_g": 8.1, "fibra_g": 2.5, "alergenos": ["Mleko", "Jaja", "Gluten"], "ingredientes": [{"nombre": "marchew", "cantidad": 200, "unidad": "g"}, {"nombre": "twaróg półtłusty", "cantidad": 200, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 70, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}]}, {"id": "placuszki-dyniowe-z-jogurtem", "nombre": "Placuszki dyniowe z jogurtem", "minutos": 15, "porciones": 3, "kcal": 218, "proteina_g": 8.2, "carbos_g": 30.8, "azucar_g": 3.5, "grasa_g": 6.7, "fibra_g": 1.6, "alergenos": ["Mleko", "Jaja", "Gluten"], "ingredientes": [{"nombre": "purée z dyni", "cantidad": 200, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 120, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 100, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}]}, {"id": "racuszki-z-borowkami", "nombre": "Racuszki z borówkami", "minutos": 15, "porciones": 3, "kcal": 255, "proteina_g": 8.5, "carbos_g": 40.4, "azucar_g": 7.3, "grasa_g": 6.6, "fibra_g": 2.3, "alergenos": ["Mleko", "Jaja", "Gluten"], "ingredientes": [{"nombre": "borówki", "cantidad": 150, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 120, "unidad": "g"}, {"nombre": "kefir", "cantidad": 150, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}]}, {"id": "nalesniki-z-twarogiem-i-malinami", "nombre": "Naleśniki z twarogiem i malinami", "minutos": 25, "porciones": 3, "kcal": 360, "proteina_g": 21.3, "carbos_g": 43.3, "azucar_g": 9.3, "grasa_g": 11.1, "fibra_g": 4.3, "alergenos": ["Mleko", "Jaja", "Gluten"], "ingredientes": [{"nombre": "mąka pszenna", "cantidad": 120, "unidad": "g"}, {"nombre": "mleko", "cantidad": 200, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}, {"nombre": "twaróg półtłusty", "cantidad": 200, "unidad": "g"}, {"nombre": "maliny", "cantidad": 150, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 50, "unidad": "g"}]}, {"id": "nalesniki-ze-szpinakiem-i-serem", "nombre": "Naleśniki ze szpinakiem i serem", "minutos": 25, "porciones": 3, "kcal": 393, "proteina_g": 12.4, "carbos_g": 37.9, "azucar_g": 5.3, "grasa_g": 21.6, "fibra_g": 2.2, "alergenos": ["Mleko", "Jaja", "Gluten"], "ingredientes": [{"nombre": "mąka pszenna", "cantidad": 120, "unidad": "g"}, {"nombre": "mleko", "cantidad": 200, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}, {"nombre": "szpinak świeży", "cantidad": 150, "unidad": "g"}, {"nombre": "serek śmietankowy naturalny", "cantidad": 120, "unidad": "g"}]}, {"id": "nalesniki-z-musem-sliwkowym", "nombre": "Naleśniki z musem śliwkowym", "minutos": 25, "porciones": 3, "kcal": 288, "proteina_g": 9.2, "carbos_g": 45.3, "azucar_g": 13.5, "grasa_g": 7.9, "fibra_g": 2.5, "alergenos": ["Mleko", "Jaja", "Gluten"], "ingredientes": [{"nombre": "mąka pszenna", "cantidad": 120, "unidad": "g"}, {"nombre": "mleko", "cantidad": 200, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}, {"nombre": "śliwka", "cantidad": 300, "unidad": "g"}, {"nombre": "woda", "cantidad": 30, "unidad": "g"}]}, {"id": "nalesniki-pomidorowe-z-mozzarella", "nombre": "Naleśniki pomidorowe z mozzarellą", "minutos": 25, "porciones": 3, "kcal": 351, "proteina_g": 16.8, "carbos_g": 37.6, "azucar_g": 3.4, "grasa_g": 14.8, "fibra_g": 2.3, "alergenos": ["Mleko", "Jaja", "Gluten"], "ingredientes": [{"nombre": "mąka pszenna", "cantidad": 120, "unidad": "g"}, {"nombre": "passata pomidorowa", "cantidad": 200, "unidad": "g"}, {"nombre": "woda", "cantidad": 120, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "mozzarella", "cantidad": 125, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}]}, {"id": "placki-ziemniaczane-z-jogurtem", "nombre": "Placki ziemniaczane z jogurtem", "minutos": 25, "porciones": 3, "kcal": 278, "proteina_g": 9.4, "carbos_g": 41.3, "azucar_g": 4.8, "grasa_g": 8.5, "fibra_g": 4.1, "alergenos": ["Mleko", "Jaja", "Gluten"], "ingredientes": [{"nombre": "ziemniak", "cantidad": 500, "unidad": "g"}, {"nombre": "cebula", "cantidad": 60, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 30, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 15, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}]}, {"id": "placuszki-z-kaszy-manny-i-truskawek", "nombre": "Placuszki z kaszy manny i truskawek", "minutos": 15, "porciones": 3, "kcal": 232, "proteina_g": 9.0, "carbos_g": 31.4, "azucar_g": 5.9, "grasa_g": 7.7, "fibra_g": 2.3, "alergenos": ["Mleko", "Jaja", "Gluten"], "ingredientes": [{"nombre": "kasza manna", "cantidad": 100, "unidad": "g"}, {"nombre": "mleko", "cantidad": 200, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "truskawka", "cantidad": 150, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}]}, {"id": "placuszki-brokulowe-z-serem", "nombre": "Placuszki brokułowe z serem", "minutos": 15, "porciones": 3, "kcal": 265, "proteina_g": 13.3, "carbos_g": 24.5, "azucar_g": 1.9, "grasa_g": 13.0, "fibra_g": 3.4, "alergenos": ["Mleko", "Jaja", "Gluten"], "ingredientes": [{"nombre": "brokuł gotowany", "cantidad": 250, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 80, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 70, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}]}, {"id": "placuszki-kukurydziane-z-papryka", "nombre": "Placuszki kukurydziane z papryką", "minutos": 15, "porciones": 3, "kcal": 227, "proteina_g": 8.2, "carbos_g": 34.2, "azucar_g": 6.4, "grasa_g": 7.0, "fibra_g": 3.1, "alergenos": ["Mleko", "Jaja", "Gluten"], "ingredientes": [{"nombre": "kukurydza konserwowa", "cantidad": 200, "unidad": "g"}, {"nombre": "papryka czerwona", "cantidad": 150, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 80, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 70, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}]}, {"id": "placki-kalafiorowe-z-koperkiem", "nombre": "Placki kalafiorowe z koperkiem", "minutos": 15, "porciones": 3, "kcal": 177, "proteina_g": 7.0, "carbos_g": 24.8, "azucar_g": 2.2, "grasa_g": 5.8, "fibra_g": 3.1, "alergenos": ["Jaja", "Gluten"], "ingredientes": [{"nombre": "kalafior gotowany", "cantidad": 300, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 80, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}]}, {"id": "racuszki-owsiane-z-brzoskwinia", "nombre": "Racuszki owsiane z brzoskwinią", "minutos": 15, "porciones": 3, "kcal": 231, "proteina_g": 8.9, "carbos_g": 30.9, "azucar_g": 7.6, "grasa_g": 8.4, "fibra_g": 4.3, "alergenos": ["Mleko", "Jaja", "Gluten"], "ingredientes": [{"nombre": "płatki owsiane", "cantidad": 100, "unidad": "g"}, {"nombre": "brzoskwinia", "cantidad": 180, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "kefir", "cantidad": 150, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}]}, {"id": "nalesniki-gryczane-z-pieczarkami", "nombre": "Naleśniki gryczane z pieczarkami", "minutos": 25, "porciones": 3, "kcal": 270, "proteina_g": 12.2, "carbos_g": 35.8, "azucar_g": 6.8, "grasa_g": 10.5, "fibra_g": 5.1, "alergenos": ["Mleko", "Jaja"], "ingredientes": [{"nombre": "mąka gryczana", "cantidad": 120, "unidad": "g"}, {"nombre": "mleko", "cantidad": 200, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "pieczarka", "cantidad": 250, "unidad": "g"}, {"nombre": "cebula", "cantidad": 50, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 15, "unidad": "g"}]}, {"id": "placuszki-z-groszku-i-miety", "nombre": "Placuszki z groszku i mięty", "minutos": 15, "porciones": 3, "kcal": 243, "proteina_g": 10.9, "carbos_g": 35.1, "azucar_g": 6.4, "grasa_g": 6.3, "fibra_g": 5.4, "alergenos": ["Mleko", "Jaja", "Gluten"], "ingredientes": [{"nombre": "groszek zielony gotowany", "cantidad": 250, "unidad": "g"}, {"nombre": "mięta świeża", "cantidad": 5, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 80, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 80, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}]}, {"id": "placki-z-buraka-i-fety", "nombre": "Placki z buraka i fety", "minutos": 15, "porciones": 3, "kcal": 278, "proteina_g": 11.2, "carbos_g": 30.1, "azucar_g": 6.8, "grasa_g": 12.7, "fibra_g": 2.4, "alergenos": ["Mleko", "Jaja", "Gluten"], "ingredientes": [{"nombre": "burak gotowany", "cantidad": 250, "unidad": "g"}, {"nombre": "ser feta", "cantidad": 100, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 80, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}]}, {"id": "muffinki-jajeczne-z-brokulem", "nombre": "Muffinki jajeczne z brokułem", "minutos": 45, "porciones": 3, "kcal": 243, "proteina_g": 18.8, "carbos_g": 7.1, "azucar_g": 3.7, "grasa_g": 15.6, "fibra_g": 1.7, "alergenos": ["Jaja", "Mleko"], "ingredientes": [{"nombre": "jajko", "cantidad": 220, "unidad": "g"}, {"nombre": "brokuł", "cantidad": 200, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 80, "unidad": "g"}, {"nombre": "mleko", "cantidad": 100, "unidad": "g"}]}, {"id": "muffinki-owsiane-z-cukinia", "nombre": "Muffinki owsiane z cukinią", "minutos": 45, "porciones": 3, "kcal": 347, "proteina_g": 14.4, "carbos_g": 38.7, "azucar_g": 4.8, "grasa_g": 15.1, "fibra_g": 5.7, "alergenos": ["Jaja", "Mleko", "Gluten"], "ingredientes": [{"nombre": "płatki owsiane", "cantidad": 150, "unidad": "g"}, {"nombre": "cukinia", "cantidad": 200, "unidad": "g"}, {"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 20, "unidad": "g"}]}, {"id": "muffinki-kukurydziane-z-papryka", "nombre": "Muffinki kukurydziane z papryką", "minutos": 45, "porciones": 3, "kcal": 364, "proteina_g": 12.7, "carbos_g": 50.5, "azucar_g": 6.6, "grasa_g": 12.7, "fibra_g": 3.4, "alergenos": ["Jaja", "Mleko", "Gluten"], "ingredientes": [{"nombre": "kukurydza konserwowa", "cantidad": 150, "unidad": "g"}, {"nombre": "papryka czerwona", "cantidad": 150, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 150, "unidad": "g"}, {"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "mleko", "cantidad": 120, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 20, "unidad": "g"}]}, {"id": "muffinki-gryczane-z-pieczarkami", "nombre": "Muffinki gryczane z pieczarkami", "minutos": 50, "porciones": 3, "kcal": 335, "proteina_g": 15.9, "carbos_g": 40.7, "azucar_g": 5.8, "grasa_g": 13.7, "fibra_g": 5.7, "alergenos": ["Jaja", "Mleko"], "ingredientes": [{"nombre": "mąka gryczana", "cantidad": 150, "unidad": "g"}, {"nombre": "pieczarki", "cantidad": 200, "unidad": "g"}, {"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 180, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 20, "unidad": "g"}]}, {"id": "muffinki-marchewkowe-z-koperkiem", "nombre": "Muffinki marchewkowe z koperkiem", "minutos": 45, "porciones": 3, "kcal": 357, "proteina_g": 12.9, "carbos_g": 47.5, "azucar_g": 5.9, "grasa_g": 12.3, "fibra_g": 3.3, "alergenos": ["Jaja", "Mleko", "Gluten"], "ingredientes": [{"nombre": "marchew", "cantidad": 200, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 150, "unidad": "g"}, {"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 20, "unidad": "g"}]}, {"id": "muffinki-szpinakowe-z-feta", "nombre": "Muffinki szpinakowe z fetą", "minutos": 45, "porciones": 4, "kcal": 319, "proteina_g": 13.6, "carbos_g": 32.7, "azucar_g": 2.2, "grasa_g": 14.6, "fibra_g": 1.7, "alergenos": ["Jaja", "Mleko", "Gluten"], "ingredientes": [{"nombre": "szpinak świeży", "cantidad": 120, "unidad": "g"}, {"nombre": "ser feta", "cantidad": 100, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 150, "unidad": "g"}, {"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 20, "unidad": "g"}]}, {"id": "muffinki-pomidorowe-z-mozzarella", "nombre": "Muffinki pomidorowe z mozzarellą", "minutos": 45, "porciones": 4, "kcal": 342, "proteina_g": 16.1, "carbos_g": 32.8, "azucar_g": 2.9, "grasa_g": 15.9, "fibra_g": 1.6, "alergenos": ["Jaja", "Mleko", "Gluten"], "ingredientes": [{"nombre": "pomidor", "cantidad": 180, "unidad": "g"}, {"nombre": "mozzarella", "cantidad": 125, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 150, "unidad": "g"}, {"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 120, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 20, "unidad": "g"}]}, {"id": "muffinki-ziemniaczane-z-twarogiem", "nombre": "Muffinki ziemniaczane z twarogiem", "minutos": 45, "porciones": 3, "kcal": 220, "proteina_g": 17.8, "carbos_g": 23.2, "azucar_g": 3.7, "grasa_g": 6.3, "fibra_g": 1.9, "alergenos": ["Jaja", "Mleko"], "ingredientes": [{"nombre": "ziemniaki ugotowane", "cantidad": 300, "unidad": "g"}, {"nombre": "twaróg półtłusty", "cantidad": 200, "unidad": "g"}, {"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}]}, {"id": "muffinki-ryzowe-z-groszkiem", "nombre": "Muffinki ryżowe z groszkiem", "minutos": 45, "porciones": 3, "kcal": 320, "proteina_g": 18.4, "carbos_g": 31.3, "azucar_g": 3.3, "grasa_g": 13.0, "fibra_g": 2.6, "alergenos": ["Jaja", "Mleko"], "ingredientes": [{"nombre": "ryż ugotowany", "cantidad": 250, "unidad": "g"}, {"nombre": "groszek mrożony", "cantidad": 150, "unidad": "g"}, {"nombre": "jajko", "cantidad": 165, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 80, "unidad": "g"}]}, {"id": "muffinki-jaglane-z-kalafiorem", "nombre": "Muffinki jaglane z kalafiorem", "minutos": 45, "porciones": 3, "kcal": 288, "proteina_g": 17.7, "carbos_g": 23.5, "azucar_g": 2.3, "grasa_g": 13.7, "fibra_g": 2.6, "alergenos": ["Jaja", "Mleko"], "ingredientes": [{"nombre": "kasza jaglana ugotowana", "cantidad": 250, "unidad": "g"}, {"nombre": "kalafior ugotowany", "cantidad": 200, "unidad": "g"}, {"nombre": "jajko", "cantidad": 165, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 80, "unidad": "g"}]}, {"id": "muffinki-z-kasza-jeczmienna-i-porem", "nombre": "Muffinki z kaszą jęczmienną i porem", "minutos": 50, "porciones": 3, "kcal": 330, "proteina_g": 16.0, "carbos_g": 30.2, "azucar_g": 2.6, "grasa_g": 16.4, "fibra_g": 3.9, "alergenos": ["Jaja", "Mleko", "Gluten"], "ingredientes": [{"nombre": "kasza jęczmienna ugotowana", "cantidad": 250, "unidad": "g"}, {"nombre": "por", "cantidad": 120, "unidad": "g"}, {"nombre": "jajko", "cantidad": 165, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 80, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}]}, {"id": "muffinki-pelnoziarniste-z-oliwkami", "nombre": "Muffinki pełnoziarniste z oliwkami", "minutos": 45, "porciones": 3, "kcal": 388, "proteina_g": 13.8, "carbos_g": 49.9, "azucar_g": 4.1, "grasa_g": 16.2, "fibra_g": 8.3, "alergenos": ["Jaja", "Mleko", "Gluten"], "ingredientes": [{"nombre": "mąka pszenna pełnoziarnista", "cantidad": 180, "unidad": "g"}, {"nombre": "oliwki bez pestek", "cantidad": 80, "unidad": "g"}, {"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 200, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 20, "unidad": "g"}]}, {"id": "muffinki-z-soczewica-i-marchewka", "nombre": "Muffinki z soczewicą i marchewką", "minutos": 45, "porciones": 3, "kcal": 383, "proteina_g": 17.2, "carbos_g": 51.0, "azucar_g": 5.8, "grasa_g": 12.1, "fibra_g": 7.7, "alergenos": ["Jaja", "Mleko", "Gluten"], "ingredientes": [{"nombre": "soczewica ugotowana", "cantidad": 200, "unidad": "g"}, {"nombre": "marchew", "cantidad": 150, "unidad": "g"}, {"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 120, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 120, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 20, "unidad": "g"}]}, {"id": "muffinki-z-lososiem-i-koperkiem", "nombre": "Muffinki z łososiem i koperkiem", "minutos": 45, "porciones": 4, "kcal": 330, "proteina_g": 17.9, "carbos_g": 31.2, "azucar_g": 2.5, "grasa_g": 14.0, "fibra_g": 1.1, "alergenos": ["Jaja", "Mleko", "Gluten", "Ryby"], "ingredientes": [{"nombre": "łosoś ugotowany", "cantidad": 150, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}, {"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 150, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 180, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 20, "unidad": "g"}]}, {"id": "muffinki-serowe-ze-szczypiorkiem", "nombre": "Muffinki serowe ze szczypiorkiem", "minutos": 45, "porciones": 5, "kcal": 310, "proteina_g": 14.3, "carbos_g": 30.1, "azucar_g": 2.6, "grasa_g": 14.1, "fibra_g": 1.1, "alergenos": ["Jaja", "Mleko", "Gluten"], "ingredientes": [{"nombre": "ser żółty", "cantidad": 120, "unidad": "g"}, {"nombre": "szczypiorek", "cantidad": 20, "unidad": "g"}, {"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 180, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 180, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 20, "unidad": "g"}]}, {"id": "muffinki-z-indykiem-i-cukinia", "nombre": "Muffinki z indykiem i cukinią", "minutos": 45, "porciones": 3, "kcal": 412, "proteina_g": 28.0, "carbos_g": 42.8, "azucar_g": 4.3, "grasa_g": 13.4, "fibra_g": 1.9, "alergenos": ["Jaja", "Mleko", "Gluten"], "ingredientes": [{"nombre": "pierś z indyka ugotowana", "cantidad": 150, "unidad": "g"}, {"nombre": "cukinia", "cantidad": 180, "unidad": "g"}, {"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 150, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 20, "unidad": "g"}]}, {"id": "muffinki-z-fasola-i-pomidorem", "nombre": "Muffinki z fasolą i pomidorem", "minutos": 45, "porciones": 3, "kcal": 413, "proteina_g": 17.5, "carbos_g": 56.7, "azucar_g": 6.1, "grasa_g": 12.6, "fibra_g": 5.6, "alergenos": ["Jaja", "Mleko", "Gluten"], "ingredientes": [{"nombre": "fasola czerwona konserwowa", "cantidad": 200, "unidad": "g"}, {"nombre": "pomidor", "cantidad": 150, "unidad": "g"}, {"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 150, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 120, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 20, "unidad": "g"}]}, {"id": "muffinki-z-batatem-i-kukurydza", "nombre": "Muffinki z batatem i kukurydzą", "minutos": 45, "porciones": 3, "kcal": 377, "proteina_g": 12.6, "carbos_g": 54.4, "azucar_g": 8.9, "grasa_g": 12.3, "fibra_g": 4.2, "alergenos": ["Jaja", "Mleko", "Gluten"], "ingredientes": [{"nombre": "batat ugotowany", "cantidad": 250, "unidad": "g"}, {"nombre": "kukurydza konserwowa", "cantidad": 150, "unidad": "g"}, {"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 120, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 100, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 20, "unidad": "g"}]}, {"id": "muffinki-z-kasza-manna-i-brokulem", "nombre": "Muffinki z kaszą manną i brokułem", "minutos": 50, "porciones": 3, "kcal": 355, "proteina_g": 20.0, "carbos_g": 38.0, "azucar_g": 5.0, "grasa_g": 13.7, "fibra_g": 3.8, "alergenos": ["Jaja", "Mleko", "Gluten"], "ingredientes": [{"nombre": "kasza manna", "cantidad": 120, "unidad": "g"}, {"nombre": "brokuł ugotowany", "cantidad": 200, "unidad": "g"}, {"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 80, "unidad": "g"}, {"nombre": "mleko", "cantidad": 200, "unidad": "g"}]}, {"id": "muffinki-z-kurczakiem-i-groszkiem", "nombre": "Muffinki z kurczakiem i groszkiem", "minutos": 50, "porciones": 4, "kcal": 332, "proteina_g": 22.0, "carbos_g": 35.8, "azucar_g": 4.0, "grasa_g": 10.4, "fibra_g": 2.7, "alergenos": ["Jaja", "Mleko", "Gluten"], "ingredientes": [{"nombre": "pierś z kurczaka ugotowana", "cantidad": 150, "unidad": "g"}, {"nombre": "groszek mrożony", "cantidad": 150, "unidad": "g"}, {"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 150, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 20, "unidad": "g"}]}, {"id": "mini-pizze-na-tortilli-z-pomidorem", "nombre": "Mini pizze na tortilli z pomidorem", "minutos": 15, "porciones": 2, "kcal": 390, "proteina_g": 19.8, "carbos_g": 36.7, "azucar_g": 5.0, "grasa_g": 18.6, "fibra_g": 2.9, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "tortilla pszenna", "cantidad": 120, "unidad": "g"}, {"nombre": "pomidor", "cantidad": 150, "unidad": "g"}, {"nombre": "mozzarella", "cantidad": 125, "unidad": "g"}, {"nombre": "passata pomidorowa", "cantidad": 60, "unidad": "g"}]}, {"id": "pizzerinki-na-kajzerce-z-papryka", "nombre": "Pizzerinki na kajzerce z papryką", "minutos": 15, "porciones": 2, "kcal": 357, "proteina_g": 17.6, "carbos_g": 38.7, "azucar_g": 8.2, "grasa_g": 15.1, "fibra_g": 3.0, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "kajzerka", "cantidad": 120, "unidad": "g"}, {"nombre": "papryka czerwona", "cantidad": 100, "unidad": "g"}, {"nombre": "passata pomidorowa", "cantidad": 80, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 80, "unidad": "g"}]}, {"id": "buleczki-twarogowe-ze-szczypiorkiem", "nombre": "Bułeczki twarogowe ze szczypiorkiem", "minutos": 35, "porciones": 4, "kcal": 289, "proteina_g": 18.4, "carbos_g": 41.7, "azucar_g": 3.5, "grasa_g": 4.8, "fibra_g": 1.5, "alergenos": ["Mleko", "Jaja", "Gluten"], "ingredientes": [{"nombre": "twaróg półtłusty", "cantidad": 250, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 200, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "szczypiorek", "cantidad": 20, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 60, "unidad": "g"}]}, {"id": "slimaczki-z-ciasta-francuskiego-ze-szpinakiem", "nombre": "Ślimaczki z ciasta francuskiego ze szpinakiem", "minutos": 40, "porciones": 6, "kcal": 357, "proteina_g": 9.3, "carbos_g": 23.0, "azucar_g": 1.3, "grasa_g": 25.7, "fibra_g": 1.7, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "ciasto francuskie", "cantidad": 275, "unidad": "g"}, {"nombre": "szpinak mrożony", "cantidad": 200, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 100, "unidad": "g"}, {"nombre": "serek śmietankowy naturalny", "cantidad": 60, "unidad": "g"}]}, {"id": "pizzerinki-z-cukinia-na-chlebie", "nombre": "Pizzerinki z cukinią na chlebie", "minutos": 15, "porciones": 2, "kcal": 383, "proteina_g": 18.6, "carbos_g": 46.3, "azucar_g": 9.2, "grasa_g": 14.0, "fibra_g": 3.7, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "chleb pszenny", "cantidad": 160, "unidad": "g"}, {"nombre": "cukinia", "cantidad": 150, "unidad": "g"}, {"nombre": "passata pomidorowa", "cantidad": 80, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 80, "unidad": "g"}]}, {"id": "buleczki-jogurtowe-z-koperkiem", "nombre": "Bułeczki jogurtowe z koperkiem", "minutos": 35, "porciones": 4, "kcal": 306, "proteina_g": 9.7, "carbos_g": 51.2, "azucar_g": 3.3, "grasa_g": 6.3, "fibra_g": 1.8, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "mąka pszenna", "cantidad": 250, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 250, "unidad": "g"}, {"nombre": "koperek", "cantidad": 20, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 15, "unidad": "g"}]}, {"id": "grzanki-pizzowe-z-pieczarkami", "nombre": "Grzanki pizzowe z pieczarkami", "minutos": 15, "porciones": 2, "kcal": 387, "proteina_g": 20.0, "carbos_g": 46.5, "azucar_g": 8.8, "grasa_g": 14.0, "fibra_g": 3.7, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "chleb pszenny", "cantidad": 160, "unidad": "g"}, {"nombre": "pieczarka", "cantidad": 150, "unidad": "g"}, {"nombre": "passata pomidorowa", "cantidad": 80, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 80, "unidad": "g"}]}, {"id": "mini-calzone-z-brokulem", "nombre": "Mini calzone z brokułem", "minutos": 35, "porciones": 4, "kcal": 362, "proteina_g": 14.6, "carbos_g": 51.5, "azucar_g": 1.6, "grasa_g": 10.7, "fibra_g": 3.6, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "ciasto na pizzę", "cantidad": 400, "unidad": "g"}, {"nombre": "brokuł gotowany", "cantidad": 200, "unidad": "g"}, {"nombre": "mozzarella", "cantidad": 125, "unidad": "g"}, {"nombre": "passata pomidorowa", "cantidad": 60, "unidad": "g"}]}, {"id": "buleczki-owsiane-z-marchewka", "nombre": "Bułeczki owsiane z marchewką", "minutos": 35, "porciones": 4, "kcal": 240, "proteina_g": 10.4, "carbos_g": 36.7, "azucar_g": 4.8, "grasa_g": 5.8, "fibra_g": 5.6, "alergenos": ["Gluten", "Mleko", "Jaja"], "ingredientes": [{"nombre": "płatki owsiane", "cantidad": 180, "unidad": "g"}, {"nombre": "marchew", "cantidad": 150, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 200, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}]}, {"id": "pizzerinki-na-baklazanie", "nombre": "Pizzerinki na bakłażanie", "minutos": 25, "porciones": 2, "kcal": 294, "proteina_g": 16.4, "carbos_g": 16.3, "azucar_g": 8.6, "grasa_g": 19.3, "fibra_g": 6.2, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "bakłażan", "cantidad": 350, "unidad": "g"}, {"nombre": "passata pomidorowa", "cantidad": 100, "unidad": "g"}, {"nombre": "mozzarella", "cantidad": 125, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 10, "unidad": "g"}]}, {"id": "slimaczki-drozdzowe-z-pomidorem", "nombre": "Ślimaczki drożdżowe z pomidorem", "minutos": 35, "porciones": 4, "kcal": 350, "proteina_g": 13.1, "carbos_g": 50.1, "azucar_g": 3.0, "grasa_g": 10.6, "fibra_g": 2.6, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "ciasto na pizzę", "cantidad": 400, "unidad": "g"}, {"nombre": "passata pomidorowa", "cantidad": 100, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 100, "unidad": "g"}, {"nombre": "papryka czerwona", "cantidad": 100, "unidad": "g"}]}, {"id": "buleczki-z-kasza-jaglana-i-serem", "nombre": "Bułeczki z kaszą jaglaną i serem", "minutos": 30, "porciones": 4, "kcal": 312, "proteina_g": 15.0, "carbos_g": 38.4, "azucar_g": 0.8, "grasa_g": 10.4, "fibra_g": 1.6, "alergenos": ["Mleko", "Jaja", "Gluten"], "ingredientes": [{"nombre": "kasza jaglana gotowana", "cantidad": 250, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 100, "unidad": "g"}, {"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 120, "unidad": "g"}]}, {"id": "pizzowe-lodeczki-z-bagietki", "nombre": "Pizzowe łódeczki z bagietki", "minutos": 15, "porciones": 3, "kcal": 268, "proteina_g": 13.4, "carbos_g": 34.5, "azucar_g": 5.5, "grasa_g": 9.0, "fibra_g": 2.2, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "bagietka pszenna", "cantidad": 160, "unidad": "g"}, {"nombre": "passata pomidorowa", "cantidad": 80, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 80, "unidad": "g"}, {"nombre": "kukurydza konserwowa", "cantidad": 80, "unidad": "g"}]}, {"id": "podplomyki-z-patelni-z-twarozkiem", "nombre": "Podpłomyki z patelni z twarożkiem", "minutos": 25, "porciones": 3, "kcal": 342, "proteina_g": 20.7, "carbos_g": 51.7, "azucar_g": 6.0, "grasa_g": 5.1, "fibra_g": 1.8, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "mąka pszenna", "cantidad": 180, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 180, "unidad": "g"}, {"nombre": "twaróg półtłusty", "cantidad": 200, "unidad": "g"}, {"nombre": "szczypiorek", "cantidad": 20, "unidad": "g"}]}, {"id": "mini-focaccie-z-pomidorkami", "nombre": "Mini focaccie z pomidorkami", "minutos": 35, "porciones": 4, "kcal": 287, "proteina_g": 6.7, "carbos_g": 47.8, "azucar_g": 1.5, "grasa_g": 7.4, "fibra_g": 2.2, "alergenos": ["Gluten"], "ingredientes": [{"nombre": "ciasto na pizzę", "cantidad": 400, "unidad": "g"}, {"nombre": "pomidor koktajlowy", "cantidad": 200, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 15, "unidad": "g"}, {"nombre": "bazylia świeża", "cantidad": 5, "unidad": "g"}]}, {"id": "buleczki-dyniowe-z-pestkami", "nombre": "Bułeczki dyniowe z pestkami", "minutos": 35, "porciones": 4, "kcal": 300, "proteina_g": 10.5, "carbos_g": 52.4, "azucar_g": 2.8, "grasa_g": 5.2, "fibra_g": 2.7, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "purée z dyni", "cantidad": 200, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 250, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 120, "unidad": "g"}, {"nombre": "pestki dyni mielone", "cantidad": 30, "unidad": "g"}]}, {"id": "pizzerinki-ziemniaczane-z-serem", "nombre": "Pizzerinki ziemniaczane z serem", "minutos": 25, "porciones": 3, "kcal": 267, "proteina_g": 11.7, "carbos_g": 35.4, "azucar_g": 4.8, "grasa_g": 9.4, "fibra_g": 3.9, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "ziemniak gotowany", "cantidad": 450, "unidad": "g"}, {"nombre": "passata pomidorowa", "cantidad": 100, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 100, "unidad": "g"}, {"nombre": "papryka czerwona", "cantidad": 80, "unidad": "g"}]}, {"id": "paluchy-serowe-z-ciasta-francuskiego", "nombre": "Paluchy serowe z ciasta francuskiego", "minutos": 25, "porciones": 7, "kcal": 307, "proteina_g": 9.3, "carbos_g": 18.9, "azucar_g": 1.1, "grasa_g": 21.6, "fibra_g": 0.7, "alergenos": ["Gluten", "Mleko", "Jaja"], "ingredientes": [{"nombre": "ciasto francuskie", "cantidad": 275, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 150, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "passata pomidorowa", "cantidad": 50, "unidad": "g"}]}, {"id": "buleczki-z-brokulem-i-mozzarella", "nombre": "Bułeczki z brokułem i mozzarellą", "minutos": 35, "porciones": 4, "kcal": 363, "proteina_g": 14.8, "carbos_g": 50.6, "azucar_g": 1.4, "grasa_g": 11.0, "fibra_g": 3.3, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "ciasto na pizzę", "cantidad": 400, "unidad": "g"}, {"nombre": "brokuł gotowany", "cantidad": 200, "unidad": "g"}, {"nombre": "mozzarella", "cantidad": 125, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 40, "unidad": "g"}]}, {"id": "kieszonki-pizzowe-z-tortilli", "nombre": "Kieszonki pizzowe z tortilli", "minutos": 15, "porciones": 2, "kcal": 345, "proteina_g": 15.8, "carbos_g": 36.2, "azucar_g": 6.0, "grasa_g": 15.7, "fibra_g": 3.1, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "tortilla pszenna", "cantidad": 120, "unidad": "g"}, {"nombre": "passata pomidorowa", "cantidad": 60, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 80, "unidad": "g"}, {"nombre": "papryka czerwona", "cantidad": 100, "unidad": "g"}]}, {"id": "wrap-z-kurczakiem-i-ogorkiem", "nombre": "Wrap z kurczakiem i ogórkiem", "minutos": 10, "porciones": 2, "kcal": 300, "proteina_g": 24.8, "carbos_g": 32.7, "azucar_g": 3.6, "grasa_g": 7.4, "fibra_g": 1.7, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "tortilla pszenna", "cantidad": 120, "unidad": "g"}, {"nombre": "pieczona pierś z kurczaka", "cantidad": 120, "unidad": "g"}, {"nombre": "ogórek", "cantidad": 120, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 40, "unidad": "g"}]}, {"id": "roladki-nalesnikowe-z-twarogiem", "nombre": "Roladki naleśnikowe z twarogiem", "minutos": 10, "porciones": 2, "kcal": 282, "proteina_g": 18.6, "carbos_g": 28.4, "azucar_g": 6.9, "grasa_g": 10.6, "fibra_g": 1.2, "alergenos": ["Gluten", "Jaja", "Mleko"], "ingredientes": [{"nombre": "naleśnik", "cantidad": 140, "unidad": "g"}, {"nombre": "twaróg półtłusty", "cantidad": 150, "unidad": "g"}, {"nombre": "truskawka", "cantidad": 120, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 40, "unidad": "g"}]}, {"id": "wrap-jajeczny-z-salata", "nombre": "Wrap jajeczny z sałatą", "minutos": 10, "porciones": 2, "kcal": 287, "proteina_g": 13.2, "carbos_g": 33.3, "azucar_g": 4.2, "grasa_g": 11.1, "fibra_g": 1.9, "alergenos": ["Gluten", "Jaja", "Mleko"], "ingredientes": [{"nombre": "tortilla pszenna", "cantidad": 120, "unidad": "g"}, {"nombre": "jajko ugotowane na twardo", "cantidad": 110, "unidad": "g"}, {"nombre": "sałata", "cantidad": 30, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 40, "unidad": "g"}, {"nombre": "ogórek", "cantidad": 100, "unidad": "g"}]}, {"id": "roladki-z-tortilli-z-hummusem", "nombre": "Roladki z tortilli z hummusem", "minutos": 10, "porciones": 2, "kcal": 348, "proteina_g": 10.3, "carbos_g": 45.2, "azucar_g": 5.2, "grasa_g": 15.4, "fibra_g": 6.4, "alergenos": ["Gluten", "Sezam"], "ingredientes": [{"nombre": "tortilla pszenna", "cantidad": 120, "unidad": "g"}, {"nombre": "hummus", "cantidad": 120, "unidad": "g"}, {"nombre": "marchew", "cantidad": 100, "unidad": "g"}, {"nombre": "ogórek", "cantidad": 100, "unidad": "g"}]}, {"id": "wrap-z-pasta-z-tunczyka", "nombre": "Wrap z pastą z tuńczyka", "minutos": 10, "porciones": 2, "kcal": 278, "proteina_g": 20.5, "carbos_g": 32.7, "azucar_g": 3.6, "grasa_g": 7.0, "fibra_g": 1.9, "alergenos": ["Gluten", "Mleko", "Ryby"], "ingredientes": [{"nombre": "tortilla pszenna", "cantidad": 120, "unidad": "g"}, {"nombre": "tuńczyk w sosie własnym", "cantidad": 120, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 40, "unidad": "g"}, {"nombre": "sałata", "cantidad": 30, "unidad": "g"}, {"nombre": "ogórek", "cantidad": 100, "unidad": "g"}]}, {"id": "roladki-z-cukinii-i-serka", "nombre": "Roladki z cukinii i serka", "minutos": 15, "porciones": 2, "kcal": 260, "proteina_g": 5.7, "carbos_g": 8.3, "azucar_g": 6.0, "grasa_g": 23.7, "fibra_g": 1.6, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "cukinia", "cantidad": 300, "unidad": "g"}, {"nombre": "serek śmietankowy naturalny", "cantidad": 120, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 5, "unidad": "g"}]}, {"id": "wrap-z-pieczonym-indykiem", "nombre": "Wrap z pieczonym indykiem", "minutos": 10, "porciones": 2, "kcal": 274, "proteina_g": 23.3, "carbos_g": 32.6, "azucar_g": 3.6, "grasa_g": 5.9, "fibra_g": 2.4, "alergenos": ["Gluten"], "ingredientes": [{"nombre": "tortilla pszenna", "cantidad": 120, "unidad": "g"}, {"nombre": "pieczona pierś z indyka", "cantidad": 120, "unidad": "g"}, {"nombre": "sałata", "cantidad": 30, "unidad": "g"}, {"nombre": "pomidor", "cantidad": 140, "unidad": "g"}]}, {"id": "roladki-omletowe-ze-szpinakiem", "nombre": "Roladki omletowe ze szpinakiem", "minutos": 15, "porciones": 2, "kcal": 322, "proteina_g": 14.3, "carbos_g": 4.4, "azucar_g": 2.3, "grasa_g": 27.7, "fibra_g": 0.7, "alergenos": ["Jaja", "Mleko"], "ingredientes": [{"nombre": "jajko", "cantidad": 165, "unidad": "g"}, {"nombre": "szpinak świeży", "cantidad": 60, "unidad": "g"}, {"nombre": "serek śmietankowy naturalny", "cantidad": 100, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 5, "unidad": "g"}]}, {"id": "wrap-z-fasola-i-kukurydza", "nombre": "Wrap z fasolą i kukurydzą", "minutos": 10, "porciones": 2, "kcal": 292, "proteina_g": 11.1, "carbos_g": 50.9, "azucar_g": 7.5, "grasa_g": 5.8, "fibra_g": 6.4, "alergenos": ["Gluten"], "ingredientes": [{"nombre": "tortilla pszenna", "cantidad": 120, "unidad": "g"}, {"nombre": "fasola czerwona konserwowa", "cantidad": 120, "unidad": "g"}, {"nombre": "kukurydza konserwowa", "cantidad": 80, "unidad": "g"}, {"nombre": "pomidor", "cantidad": 140, "unidad": "g"}]}, {"id": "roladki-z-ogorka-z-twarozkiem", "nombre": "Roladki z ogórka z twarożkiem", "minutos": 10, "porciones": 2, "kcal": 133, "proteina_g": 15.1, "carbos_g": 10.8, "azucar_g": 7.1, "grasa_g": 3.9, "fibra_g": 1.3, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "ogórek", "cantidad": 300, "unidad": "g"}, {"nombre": "twaróg półtłusty", "cantidad": 150, "unidad": "g"}, {"nombre": "rzodkiewka", "cantidad": 60, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 40, "unidad": "g"}]}, {"id": "wrap-z-mozzarella-i-pomidorem", "nombre": "Wrap z mozzarellą i pomidorem", "minutos": 10, "porciones": 2, "kcal": 378, "proteina_g": 19.4, "carbos_g": 33.9, "azucar_g": 3.4, "grasa_g": 18.5, "fibra_g": 2.3, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "tortilla pszenna", "cantidad": 120, "unidad": "g"}, {"nombre": "mozzarella", "cantidad": 125, "unidad": "g"}, {"nombre": "pomidor", "cantidad": 140, "unidad": "g"}, {"nombre": "bazylia świeża", "cantidad": 5, "unidad": "g"}]}, {"id": "roladki-z-chleba-z-pasta-jajeczna", "nombre": "Roladki z chleba z pastą jajeczną", "minutos": 10, "porciones": 2, "kcal": 260, "proteina_g": 13.4, "carbos_g": 31.5, "azucar_g": 5.1, "grasa_g": 8.5, "fibra_g": 1.7, "alergenos": ["Gluten", "Jaja", "Mleko"], "ingredientes": [{"nombre": "chleb tostowy", "cantidad": 120, "unidad": "g"}, {"nombre": "jajko ugotowane na twardo", "cantidad": 110, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 40, "unidad": "g"}, {"nombre": "szczypiorek", "cantidad": 10, "unidad": "g"}]}, {"id": "wrap-z-lososiem-i-koperkiem", "nombre": "Wrap z łososiem i koperkiem", "minutos": 10, "porciones": 3, "kcal": 301, "proteina_g": 14.0, "carbos_g": 22.6, "azucar_g": 2.6, "grasa_g": 17.2, "fibra_g": 1.2, "alergenos": ["Gluten", "Mleko", "Ryby"], "ingredientes": [{"nombre": "tortilla pszenna", "cantidad": 120, "unidad": "g"}, {"nombre": "łosoś pieczony", "cantidad": 120, "unidad": "g"}, {"nombre": "serek śmietankowy naturalny", "cantidad": 80, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}, {"nombre": "ogórek", "cantidad": 100, "unidad": "g"}]}, {"id": "roladki-z-pieczonej-papryki", "nombre": "Roladki z pieczonej papryki", "minutos": 10, "porciones": 2, "kcal": 157, "proteina_g": 17.5, "carbos_g": 12.9, "azucar_g": 10.0, "grasa_g": 4.5, "fibra_g": 1.6, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "papryka pieczona", "cantidad": 240, "unidad": "g"}, {"nombre": "twaróg półtłusty", "cantidad": 180, "unidad": "g"}, {"nombre": "szczypiorek", "cantidad": 10, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 40, "unidad": "g"}]}, {"id": "wrap-z-kotlecikiem-z-soczewicy", "nombre": "Wrap z kotlecikiem z soczewicy", "minutos": 10, "porciones": 2, "kcal": 294, "proteina_g": 13.5, "carbos_g": 48.8, "azucar_g": 5.0, "grasa_g": 5.5, "fibra_g": 8.2, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "tortilla pszenna", "cantidad": 120, "unidad": "g"}, {"nombre": "kotlet z soczewicy", "cantidad": 160, "unidad": "g"}, {"nombre": "sałata", "cantidad": 30, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 40, "unidad": "g"}, {"nombre": "ogórek", "cantidad": 100, "unidad": "g"}]}, {"id": "roladki-z-szynki-z-indyka-pieczonej-w-domu", "nombre": "Roladki z szynki z indyka pieczonej w domu", "minutos": 10, "porciones": 2, "kcal": 324, "proteina_g": 33.2, "carbos_g": 5.8, "azucar_g": 3.3, "grasa_g": 19.3, "fibra_g": 0.5, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "pieczona pierś z indyka", "cantidad": 200, "unidad": "g"}, {"nombre": "serek śmietankowy naturalny", "cantidad": 100, "unidad": "g"}, {"nombre": "ogórek", "cantidad": 160, "unidad": "g"}, {"nombre": "szczypiorek", "cantidad": 5, "unidad": "g"}]}, {"id": "wrap-z-jajecznica-i-pomidorem", "nombre": "Wrap z jajecznicą i pomidorem", "minutos": 15, "porciones": 2, "kcal": 359, "proteina_g": 17.3, "carbos_g": 33.1, "azucar_g": 4.1, "grasa_g": 17.4, "fibra_g": 2.3, "alergenos": ["Gluten", "Jaja", "Mleko"], "ingredientes": [{"nombre": "tortilla pszenna", "cantidad": 120, "unidad": "g"}, {"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "pomidor", "cantidad": 140, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 40, "unidad": "g"}, {"nombre": "masło", "cantidad": 5, "unidad": "g"}]}, {"id": "roladki-ryzowe-z-warzywami", "nombre": "Roladki ryżowe z warzywami", "minutos": 15, "porciones": 2, "kcal": 320, "proteina_g": 6.0, "carbos_g": 28.0, "azucar_g": 6.5, "grasa_g": 21.2, "fibra_g": 2.6, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "papier ryżowy", "cantidad": 40, "unidad": "g"}, {"nombre": "marchew", "cantidad": 120, "unidad": "g"}, {"nombre": "ogórek", "cantidad": 160, "unidad": "g"}, {"nombre": "serek śmietankowy naturalny", "cantidad": 120, "unidad": "g"}]}, {"id": "wrap-z-pasta-z-groszku", "nombre": "Wrap z pastą z groszku", "minutos": 10, "porciones": 2, "kcal": 375, "proteina_g": 11.0, "carbos_g": 41.2, "azucar_g": 5.6, "grasa_g": 19.0, "fibra_g": 5.5, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "tortilla pszenna", "cantidad": 120, "unidad": "g"}, {"nombre": "groszek konserwowy", "cantidad": 160, "unidad": "g"}, {"nombre": "serek śmietankowy naturalny", "cantidad": 80, "unidad": "g"}, {"nombre": "sałata", "cantidad": 30, "unidad": "g"}]}, {"id": "roladki-z-tortilli-z-jablkiem-i-twarogiem", "nombre": "Roladki z tortilli z jabłkiem i twarogiem", "minutos": 10, "porciones": 2, "kcal": 321, "proteina_g": 18.7, "carbos_g": 43.9, "azucar_g": 13.4, "grasa_g": 8.3, "fibra_g": 3.2, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "tortilla pszenna", "cantidad": 120, "unidad": "g"}, {"nombre": "jabłko", "cantidad": 150, "unidad": "g"}, {"nombre": "twaróg półtłusty", "cantidad": 150, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 40, "unidad": "g"}]}, {"id": "kanapka-z-pasta-jajeczna-i-szczypiorkiem", "nombre": "Kanapka z pastą jajeczną i szczypiorkiem", "minutos": 10, "porciones": 2, "kcal": 313, "proteina_g": 15.1, "carbos_g": 41.3, "azucar_g": 6.2, "grasa_g": 9.1, "fibra_g": 2.2, "alergenos": ["Gluten", "Jaja", "Mleko"], "ingredientes": [{"nombre": "chleb pszenny", "cantidad": 160, "unidad": "g"}, {"nombre": "jajko ugotowane na twardo", "cantidad": 110, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 40, "unidad": "g"}, {"nombre": "szczypiorek", "cantidad": 5, "unidad": "g"}]}, {"id": "kanapka-z-twarozkiem-i-rzodkiewka", "nombre": "Kanapka z twarożkiem i rzodkiewką", "minutos": 10, "porciones": 2, "kcal": 305, "proteina_g": 18.8, "carbos_g": 43.8, "azucar_g": 8.5, "grasa_g": 5.8, "fibra_g": 2.5, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "chleb pszenny", "cantidad": 160, "unidad": "g"}, {"nombre": "twaróg półtłusty", "cantidad": 125, "unidad": "g"}, {"nombre": "rzodkiewka", "cantidad": 45, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 40, "unidad": "g"}]}, {"id": "kanapka-z-pasta-z-bialej-fasoli", "nombre": "Kanapka z pastą z białej fasoli", "minutos": 10, "porciones": 2, "kcal": 341, "proteina_g": 13.0, "carbos_g": 54.8, "azucar_g": 4.7, "grasa_g": 7.9, "fibra_g": 6.0, "alergenos": ["Gluten"], "ingredientes": [{"nombre": "chleb pszenny", "cantidad": 160, "unidad": "g"}, {"nombre": "fasola biała gotowana", "cantidad": 120, "unidad": "g"}, {"nombre": "sok z cytryny", "cantidad": 5, "unidad": "g"}, {"nombre": "koperek", "cantidad": 5, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 10, "unidad": "g"}]}, {"id": "kanapka-z-hummusem-i-ogorkiem", "nombre": "Kanapka z hummusem i ogórkiem", "minutos": 10, "porciones": 2, "kcal": 362, "proteina_g": 12.1, "carbos_g": 50.2, "azucar_g": 5.7, "grasa_g": 13.4, "fibra_g": 5.8, "alergenos": ["Gluten", "Sezam"], "ingredientes": [{"nombre": "chleb pszenny", "cantidad": 160, "unidad": "g"}, {"nombre": "hummus", "cantidad": 120, "unidad": "g"}, {"nombre": "ogórek", "cantidad": 80, "unidad": "g"}, {"nombre": "sałata", "cantidad": 20, "unidad": "g"}]}, {"id": "kanapka-z-pasta-z-makreli", "nombre": "Kanapka z pastą z makreli", "minutos": 10, "porciones": 2, "kcal": 364, "proteina_g": 20.2, "carbos_g": 42.0, "azucar_g": 6.2, "grasa_g": 12.2, "fibra_g": 2.4, "alergenos": ["Gluten", "Mleko", "Ryby"], "ingredientes": [{"nombre": "chleb pszenny", "cantidad": 160, "unidad": "g"}, {"nombre": "makrela wędzona", "cantidad": 100, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 40, "unidad": "g"}, {"nombre": "ogórek", "cantidad": 80, "unidad": "g"}]}, {"id": "kanapka-z-mozzarella-i-pomidorem", "nombre": "Kanapka z mozzarellą i pomidorem", "minutos": 10, "porciones": 2, "kcal": 411, "proteina_g": 21.5, "carbos_g": 43.4, "azucar_g": 6.1, "grasa_g": 16.6, "fibra_g": 2.9, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "chleb pszenny", "cantidad": 160, "unidad": "g"}, {"nombre": "mozzarella", "cantidad": 125, "unidad": "g"}, {"nombre": "pomidor", "cantidad": 120, "unidad": "g"}, {"nombre": "bazylia świeża", "cantidad": 3, "unidad": "g"}]}, {"id": "kanapka-z-pasta-z-groszku-i-miety", "nombre": "Kanapka z pastą z groszku i mięty", "minutos": 10, "porciones": 2, "kcal": 378, "proteina_g": 12.7, "carbos_g": 52.4, "azucar_g": 9.8, "grasa_g": 13.2, "fibra_g": 6.1, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "chleb pszenny", "cantidad": 160, "unidad": "g"}, {"nombre": "groszek zielony gotowany", "cantidad": 140, "unidad": "g"}, {"nombre": "mięta świeża", "cantidad": 3, "unidad": "g"}, {"nombre": "serek śmietankowy naturalny", "cantidad": 60, "unidad": "g"}]}, {"id": "kanapka-z-pieczonym-kurczakiem", "nombre": "Kanapka z pieczonym kurczakiem", "minutos": 10, "porciones": 2, "kcal": 327, "proteina_g": 26.8, "carbos_g": 40.8, "azucar_g": 5.6, "grasa_g": 5.4, "fibra_g": 2.3, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "chleb pszenny", "cantidad": 160, "unidad": "g"}, {"nombre": "pierś z kurczaka pieczona", "cantidad": 120, "unidad": "g"}, {"nombre": "sałata", "cantidad": 20, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 40, "unidad": "g"}]}, {"id": "kanapka-z-pasta-marchewkowa", "nombre": "Kanapka z pastą marchewkową", "minutos": 10, "porciones": 2, "kcal": 340, "proteina_g": 9.5, "carbos_g": 46.3, "azucar_g": 7.7, "grasa_g": 13.1, "fibra_g": 4.0, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "chleb pszenny", "cantidad": 160, "unidad": "g"}, {"nombre": "marchew gotowana", "cantidad": 120, "unidad": "g"}, {"nombre": "serek śmietankowy naturalny", "cantidad": 60, "unidad": "g"}, {"nombre": "koperek", "cantidad": 5, "unidad": "g"}]}, {"id": "kanapka-z-serkiem-i-papryka", "nombre": "Kanapka z serkiem i papryką", "minutos": 10, "porciones": 3, "kcal": 291, "proteina_g": 7.6, "carbos_g": 30.7, "azucar_g": 6.0, "grasa_g": 15.7, "fibra_g": 2.2, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "chleb pszenny", "cantidad": 160, "unidad": "g"}, {"nombre": "serek śmietankowy naturalny", "cantidad": 120, "unidad": "g"}, {"nombre": "papryka czerwona", "cantidad": 100, "unidad": "g"}, {"nombre": "sałata", "cantidad": 20, "unidad": "g"}]}, {"id": "kanapka-z-pasta-z-soczewicy", "nombre": "Kanapka z pastą z soczewicy", "minutos": 10, "porciones": 2, "kcal": 327, "proteina_g": 14.1, "carbos_g": 55.8, "azucar_g": 6.7, "grasa_g": 5.5, "fibra_g": 8.4, "alergenos": ["Gluten"], "ingredientes": [{"nombre": "chleb pszenny", "cantidad": 160, "unidad": "g"}, {"nombre": "soczewica gotowana", "cantidad": 150, "unidad": "g"}, {"nombre": "pomidor", "cantidad": 60, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 5, "unidad": "g"}]}, {"id": "kanapka-z-awokado-i-jajkiem", "nombre": "Kanapka z awokado i jajkiem", "minutos": 10, "porciones": 2, "kcal": 378, "proteina_g": 15.0, "carbos_g": 44.4, "azucar_g": 5.5, "grasa_g": 15.8, "fibra_g": 5.5, "alergenos": ["Gluten", "Jaja"], "ingredientes": [{"nombre": "chleb pszenny", "cantidad": 160, "unidad": "g"}, {"nombre": "awokado", "cantidad": 100, "unidad": "g"}, {"nombre": "jajko ugotowane na twardo", "cantidad": 110, "unidad": "g"}, {"nombre": "sok z cytryny", "cantidad": 5, "unidad": "g"}]}, {"id": "kanapka-z-pieczonym-burakiem", "nombre": "Kanapka z pieczonym burakiem", "minutos": 10, "porciones": 2, "kcal": 315, "proteina_g": 18.8, "carbos_g": 48.2, "azucar_g": 11.8, "grasa_g": 5.3, "fibra_g": 3.4, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "chleb pszenny", "cantidad": 160, "unidad": "g"}, {"nombre": "burak pieczony", "cantidad": 120, "unidad": "g"}, {"nombre": "twaróg półtłusty", "cantidad": 125, "unidad": "g"}, {"nombre": "koperek", "cantidad": 5, "unidad": "g"}]}, {"id": "kanapka-z-pasta-z-brokulu", "nombre": "Kanapka z pastą z brokułu", "minutos": 10, "porciones": 2, "kcal": 340, "proteina_g": 10.4, "carbos_g": 45.6, "azucar_g": 6.5, "grasa_g": 13.3, "fibra_g": 4.2, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "chleb pszenny", "cantidad": 160, "unidad": "g"}, {"nombre": "brokuł gotowany", "cantidad": 120, "unidad": "g"}, {"nombre": "serek śmietankowy naturalny", "cantidad": 60, "unidad": "g"}, {"nombre": "szczypiorek", "cantidad": 5, "unidad": "g"}]}, {"id": "kanapka-z-indykiem-i-jablkiem", "nombre": "Kanapka z indykiem i jabłkiem", "minutos": 10, "porciones": 2, "kcal": 316, "proteina_g": 25.0, "carbos_g": 45.3, "azucar_g": 8.8, "grasa_g": 3.9, "fibra_g": 3.2, "alergenos": ["Gluten"], "ingredientes": [{"nombre": "chleb pszenny", "cantidad": 160, "unidad": "g"}, {"nombre": "pierś z indyka pieczona", "cantidad": 120, "unidad": "g"}, {"nombre": "jabłko", "cantidad": 80, "unidad": "g"}, {"nombre": "sałata", "cantidad": 20, "unidad": "g"}]}, {"id": "kanapka-z-pasta-z-pieczonej-dyni", "nombre": "Kanapka z pastą z pieczonej dyni", "minutos": 10, "porciones": 2, "kcal": 322, "proteina_g": 19.0, "carbos_g": 49.1, "azucar_g": 9.0, "grasa_g": 5.7, "fibra_g": 4.1, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "chleb pszenny", "cantidad": 160, "unidad": "g"}, {"nombre": "dynia pieczona", "cantidad": 120, "unidad": "g"}, {"nombre": "twaróg półtłusty", "cantidad": 125, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 30, "unidad": "g"}]}, {"id": "kanapka-z-ricotta-i-gruszka", "nombre": "Kanapka z ricottą i gruszką", "minutos": 10, "porciones": 2, "kcal": 357, "proteina_g": 12.8, "carbos_g": 55.5, "azucar_g": 12.3, "grasa_g": 9.6, "fibra_g": 4.3, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "chleb pszenny", "cantidad": 160, "unidad": "g"}, {"nombre": "ricotta", "cantidad": 125, "unidad": "g"}, {"nombre": "gruszka", "cantidad": 140, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 30, "unidad": "g"}]}, {"id": "kanapka-z-pasta-z-kalafiora", "nombre": "Kanapka z pastą z kalafiora", "minutos": 10, "porciones": 2, "kcal": 242, "proteina_g": 9.2, "carbos_g": 43.2, "azucar_g": 6.8, "grasa_g": 3.6, "fibra_g": 3.6, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "chleb pszenny", "cantidad": 160, "unidad": "g"}, {"nombre": "kalafior gotowany", "cantidad": 120, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 40, "unidad": "g"}, {"nombre": "koperek", "cantidad": 5, "unidad": "g"}]}, {"id": "kanapka-z-pasta-z-pieczarek", "nombre": "Kanapka z pastą z pieczarek", "minutos": 15, "porciones": 2, "kcal": 328, "proteina_g": 10.9, "carbos_g": 44.4, "azucar_g": 7.4, "grasa_g": 12.3, "fibra_g": 3.2, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "chleb pszenny", "cantidad": 160, "unidad": "g"}, {"nombre": "pieczarka", "cantidad": 160, "unidad": "g"}, {"nombre": "cebula", "cantidad": 25, "unidad": "g"}, {"nombre": "serek śmietankowy naturalny", "cantidad": 40, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 5, "unidad": "g"}]}, {"id": "kanapka-z-pasta-z-pieczonej-papryki", "nombre": "Kanapka z pastą z pieczonej papryki", "minutos": 10, "porciones": 2, "kcal": 332, "proteina_g": 13.4, "carbos_g": 57.9, "azucar_g": 6.9, "grasa_g": 5.5, "fibra_g": 6.5, "alergenos": ["Gluten"], "ingredientes": [{"nombre": "chleb pszenny", "cantidad": 160, "unidad": "g"}, {"nombre": "papryka pieczona", "cantidad": 100, "unidad": "g"}, {"nombre": "fasola biała gotowana", "cantidad": 120, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 5, "unidad": "g"}]}, {"id": "jajka-faszerowane-twarozkiem", "nombre": "Jajka faszerowane twarożkiem", "minutos": 10, "porciones": 2, "kcal": 157, "proteina_g": 16.2, "carbos_g": 3.5, "azucar_g": 3.4, "grasa_g": 8.3, "fibra_g": 0.1, "alergenos": ["Jaja", "Mleko"], "ingredientes": [{"nombre": "jajko ugotowane na twardo", "cantidad": 110, "unidad": "g"}, {"nombre": "twaróg półtłusty", "cantidad": 100, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 30, "unidad": "g"}, {"nombre": "koperek", "cantidad": 5, "unidad": "g"}]}, {"id": "jajecznica-z-pomidorem", "nombre": "Jajecznica z pomidorem", "minutos": 10, "porciones": 2, "kcal": 150, "proteina_g": 11.1, "carbos_g": 3.6, "azucar_g": 2.3, "grasa_g": 10.0, "fibra_g": 1.0, "alergenos": ["Jaja", "Mleko"], "ingredientes": [{"nombre": "jajko", "cantidad": 165, "unidad": "g"}, {"nombre": "pomidor", "cantidad": 150, "unidad": "g"}, {"nombre": "szczypiorek", "cantidad": 5, "unidad": "g"}, {"nombre": "masło", "cantidad": 5, "unidad": "g"}]}, {"id": "omlet-z-groszkiem-i-serem", "nombre": "Omlet z groszkiem i serem", "minutos": 15, "porciones": 2, "kcal": 253, "proteina_g": 18.0, "carbos_g": 8.9, "azucar_g": 3.7, "grasa_g": 15.9, "fibra_g": 2.8, "alergenos": ["Jaja", "Mleko"], "ingredientes": [{"nombre": "jajko", "cantidad": 165, "unidad": "g"}, {"nombre": "groszek zielony gotowany", "cantidad": 100, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 40, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 5, "unidad": "g"}]}, {"id": "twarozek-z-rzodkiewka-i-szczypiorkiem", "nombre": "Twarożek z rzodkiewką i szczypiorkiem", "minutos": 10, "porciones": 2, "kcal": 149, "proteina_g": 18.9, "carbos_g": 7.1, "azucar_g": 6.3, "grasa_g": 5.0, "fibra_g": 0.8, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "twaróg półtłusty", "cantidad": 200, "unidad": "g"}, {"nombre": "rzodkiewka", "cantidad": 80, "unidad": "g"}, {"nombre": "szczypiorek", "cantidad": 10, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 60, "unidad": "g"}]}, {"id": "twarog-z-jablkiem-i-cynamonem", "nombre": "Twaróg z jabłkiem i cynamonem", "minutos": 10, "porciones": 2, "kcal": 218, "proteina_g": 20.0, "carbos_g": 22.6, "azucar_g": 13.4, "grasa_g": 5.7, "fibra_g": 2.8, "alergenos": ["Mleko", "Gluten"], "ingredientes": [{"nombre": "twaróg półtłusty", "cantidad": 200, "unidad": "g"}, {"nombre": "jabłko", "cantidad": 150, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 60, "unidad": "g"}, {"nombre": "płatki owsiane", "cantidad": 20, "unidad": "g"}]}, {"id": "twarog-z-malinami-i-bananem", "nombre": "Twaróg z malinami i bananem", "minutos": 10, "porciones": 2, "kcal": 220, "proteina_g": 19.7, "carbos_g": 25.2, "azucar_g": 15.0, "grasa_g": 5.4, "fibra_g": 4.8, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "twaróg półtłusty", "cantidad": 200, "unidad": "g"}, {"nombre": "maliny", "cantidad": 100, "unidad": "g"}, {"nombre": "banan", "cantidad": 120, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 60, "unidad": "g"}]}, {"id": "jajko-sadzone-na-szpinaku", "nombre": "Jajko sadzone na szpinaku", "minutos": 10, "porciones": 2, "kcal": 126, "proteina_g": 9.0, "carbos_g": 5.1, "azucar_g": 2.4, "grasa_g": 8.1, "fibra_g": 2.0, "alergenos": ["Jaja"], "ingredientes": [{"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "szpinak świeży", "cantidad": 100, "unidad": "g"}, {"nombre": "pomidor", "cantidad": 150, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 5, "unidad": "g"}]}, {"id": "omlet-z-pieczarkami", "nombre": "Omlet z pieczarkami", "minutos": 15, "porciones": 2, "kcal": 228, "proteina_g": 17.7, "carbos_g": 3.5, "azucar_g": 2.2, "grasa_g": 16.1, "fibra_g": 0.8, "alergenos": ["Jaja", "Mleko"], "ingredientes": [{"nombre": "jajko", "cantidad": 165, "unidad": "g"}, {"nombre": "pieczarka", "cantidad": 150, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 40, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 5, "unidad": "g"}]}, {"id": "jajka-zapiekane-w-kokilkach-z-brokulem", "nombre": "Jajka zapiekane w kokilkach z brokułem", "minutos": 25, "porciones": 2, "kcal": 194, "proteina_g": 13.7, "carbos_g": 6.2, "azucar_g": 1.7, "grasa_g": 13.1, "fibra_g": 2.5, "alergenos": ["Jaja", "Mleko"], "ingredientes": [{"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "brokuł gotowany", "cantidad": 150, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 40, "unidad": "g"}, {"nombre": "masło", "cantidad": 5, "unidad": "g"}]}, {"id": "pasta-jajeczna-z-awokado", "nombre": "Pasta jajeczna z awokado", "minutos": 10, "porciones": 2, "kcal": 182, "proteina_g": 8.2, "carbos_g": 5.8, "azucar_g": 1.1, "grasa_g": 14.6, "fibra_g": 4.1, "alergenos": ["Jaja"], "ingredientes": [{"nombre": "jajko ugotowane na twardo", "cantidad": 110, "unidad": "g"}, {"nombre": "awokado", "cantidad": 120, "unidad": "g"}, {"nombre": "sok z cytryny", "cantidad": 10, "unidad": "g"}, {"nombre": "szczypiorek", "cantidad": 5, "unidad": "g"}]}, {"id": "twarozek-z-ogorkiem-i-koperkiem", "nombre": "Twarożek z ogórkiem i koperkiem", "minutos": 10, "porciones": 2, "kcal": 151, "proteina_g": 18.9, "carbos_g": 7.9, "azucar_g": 6.5, "grasa_g": 5.0, "fibra_g": 0.4, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "twaróg półtłusty", "cantidad": 200, "unidad": "g"}, {"nombre": "ogórek", "cantidad": 120, "unidad": "g"}, {"nombre": "koperek", "cantidad": 5, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 60, "unidad": "g"}]}, {"id": "omlet-owsiany-z-gruszka", "nombre": "Omlet owsiany z gruszką", "minutos": 15, "porciones": 2, "kcal": 276, "proteina_g": 12.1, "carbos_g": 33.6, "azucar_g": 9.3, "grasa_g": 10.8, "fibra_g": 5.4, "alergenos": ["Jaja", "Mleko", "Gluten"], "ingredientes": [{"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "płatki owsiane", "cantidad": 60, "unidad": "g"}, {"nombre": "gruszka", "cantidad": 150, "unidad": "g"}, {"nombre": "mleko", "cantidad": 60, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 5, "unidad": "g"}]}, {"id": "jajeczne-kubeczki-z-papryka", "nombre": "Jajeczne kubeczki z papryką", "minutos": 15, "porciones": 2, "kcal": 224, "proteina_g": 15.8, "carbos_g": 4.1, "azucar_g": 2.8, "grasa_g": 16.0, "fibra_g": 1.1, "alergenos": ["Jaja", "Mleko"], "ingredientes": [{"nombre": "jajko", "cantidad": 165, "unidad": "g"}, {"nombre": "papryka czerwona", "cantidad": 100, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 40, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 5, "unidad": "g"}]}, {"id": "serek-wiejski-z-pomidorem", "nombre": "Serek wiejski z pomidorem", "minutos": 10, "porciones": 2, "kcal": 116, "proteina_g": 11.9, "carbos_g": 6.4, "azucar_g": 4.7, "grasa_g": 4.7, "fibra_g": 1.4, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "serek wiejski naturalny", "cantidad": 200, "unidad": "g"}, {"nombre": "pomidor", "cantidad": 150, "unidad": "g"}, {"nombre": "szczypiorek", "cantidad": 5, "unidad": "g"}, {"nombre": "rzodkiewka", "cantidad": 60, "unidad": "g"}]}, {"id": "serek-wiejski-z-brzoskwinia", "nombre": "Serek wiejski z brzoskwinią", "minutos": 10, "porciones": 2, "kcal": 219, "proteina_g": 14.1, "carbos_g": 28.8, "azucar_g": 13.5, "grasa_g": 5.8, "fibra_g": 3.7, "alergenos": ["Mleko", "Gluten"], "ingredientes": [{"nombre": "serek wiejski naturalny", "cantidad": 200, "unidad": "g"}, {"nombre": "brzoskwinia", "cantidad": 150, "unidad": "g"}, {"nombre": "płatki owsiane", "cantidad": 30, "unidad": "g"}, {"nombre": "banan", "cantidad": 80, "unidad": "g"}]}, {"id": "leniwe-z-twarogu-z-musem-truskawkowym", "nombre": "Leniwe z twarogu z musem truskawkowym", "minutos": 25, "porciones": 3, "kcal": 269, "proteina_g": 20.4, "carbos_g": 34.0, "azucar_g": 6.8, "grasa_g": 5.6, "fibra_g": 2.2, "alergenos": ["Mleko", "Jaja", "Gluten"], "ingredientes": [{"nombre": "twaróg półtłusty", "cantidad": 250, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 100, "unidad": "g"}, {"nombre": "truskawka", "cantidad": 200, "unidad": "g"}]}, {"id": "kluski-twarogowe-z-koperkiem", "nombre": "Kluski twarogowe z koperkiem", "minutos": 25, "porciones": 3, "kcal": 273, "proteina_g": 20.1, "carbos_g": 29.1, "azucar_g": 3.5, "grasa_g": 8.1, "fibra_g": 1.0, "alergenos": ["Mleko", "Jaja", "Gluten"], "ingredientes": [{"nombre": "twaróg półtłusty", "cantidad": 250, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 100, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}, {"nombre": "masło", "cantidad": 10, "unidad": "g"}]}, {"id": "pasta-twarogowa-z-pieczona-papryka", "nombre": "Pasta twarogowa z pieczoną papryką", "minutos": 10, "porciones": 2, "kcal": 159, "proteina_g": 19.2, "carbos_g": 9.7, "azucar_g": 8.2, "grasa_g": 5.1, "fibra_g": 0.8, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "twaróg półtłusty", "cantidad": 200, "unidad": "g"}, {"nombre": "papryka pieczona", "cantidad": 120, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 60, "unidad": "g"}, {"nombre": "szczypiorek", "cantidad": 10, "unidad": "g"}]}, {"id": "jajka-w-koszulkach-na-grzance", "nombre": "Jajka w koszulkach na grzance", "minutos": 15, "porciones": 2, "kcal": 295, "proteina_g": 13.2, "carbos_g": 29.1, "azucar_g": 5.8, "grasa_g": 13.9, "fibra_g": 2.2, "alergenos": ["Jaja", "Gluten", "Mleko"], "ingredientes": [{"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "chleb pszenny", "cantidad": 100, "unidad": "g"}, {"nombre": "pomidor", "cantidad": 150, "unidad": "g"}, {"nombre": "serek śmietankowy", "cantidad": 40, "unidad": "g"}]}, {"id": "mini-frittata-z-cukinia", "nombre": "Mini frittata z cukinią", "minutos": 15, "porciones": 2, "kcal": 224, "proteina_g": 16.3, "carbos_g": 3.4, "azucar_g": 2.6, "grasa_g": 16.1, "fibra_g": 0.8, "alergenos": ["Jaja", "Mleko"], "ingredientes": [{"nombre": "jajko", "cantidad": 165, "unidad": "g"}, {"nombre": "cukinia", "cantidad": 150, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 40, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 5, "unidad": "g"}]}, {"id": "kasza-jaglana-z-jablkiem-i-cynamonem", "nombre": "Kasza jaglana z jabłkiem i cynamonem", "minutos": 10, "porciones": 3, "kcal": 193, "proteina_g": 5.6, "carbos_g": 31.4, "azucar_g": 9.5, "grasa_g": 5.2, "fibra_g": 2.7, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "kasza jaglana ugotowana", "cantidad": 250, "unidad": "g"}, {"nombre": "jabłko", "cantidad": 200, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}, {"nombre": "masło", "cantidad": 10, "unidad": "g"}]}, {"id": "budyn-jaglany-z-malinami", "nombre": "Budyń jaglany z malinami", "minutos": 10, "porciones": 3, "kcal": 182, "proteina_g": 5.5, "carbos_g": 34.1, "azucar_g": 10.6, "grasa_g": 3.3, "fibra_g": 5.2, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "kasza jaglana ugotowana", "cantidad": 200, "unidad": "g"}, {"nombre": "mleko", "cantidad": 200, "unidad": "g"}, {"nombre": "maliny", "cantidad": 150, "unidad": "g"}, {"nombre": "banan", "cantidad": 120, "unidad": "g"}]}, {"id": "ryz-z-jogurtem-i-truskawkami", "nombre": "Ryż z jogurtem i truskawkami", "minutos": 10, "porciones": 3, "kcal": 173, "proteina_g": 5.7, "carbos_g": 32.0, "azucar_g": 9.1, "grasa_g": 2.4, "fibra_g": 2.0, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "ryż ugotowany", "cantidad": 200, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 200, "unidad": "g"}, {"nombre": "truskawki", "cantidad": 150, "unidad": "g"}, {"nombre": "banan", "cantidad": 80, "unidad": "g"}]}, {"id": "makaron-z-twarogiem-i-gruszka", "nombre": "Makaron z twarogiem i gruszką", "minutos": 15, "porciones": 3, "kcal": 278, "proteina_g": 17.6, "carbos_g": 43.5, "azucar_g": 11.1, "grasa_g": 3.9, "fibra_g": 3.3, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "makaron świderki", "cantidad": 120, "unidad": "g"}, {"nombre": "twaróg półtłusty", "cantidad": 200, "unidad": "g"}, {"nombre": "gruszka", "cantidad": 200, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 50, "unidad": "g"}]}, {"id": "kasza-gryczana-z-pieczarkami", "nombre": "Kasza gryczana z pieczarkami", "minutos": 15, "porciones": 3, "kcal": 128, "proteina_g": 4.5, "carbos_g": 17.3, "azucar_g": 2.8, "grasa_g": 5.7, "fibra_g": 2.8, "alergenos": [], "ingredientes": [{"nombre": "kasza gryczana ugotowana", "cantidad": 200, "unidad": "g"}, {"nombre": "pieczarki", "cantidad": 200, "unidad": "g"}, {"nombre": "cebula", "cantidad": 60, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 15, "unidad": "g"}]}, {"id": "kuskus-z-warzywami-i-feta", "nombre": "Kuskus z warzywami i fetą", "minutos": 10, "porciones": 3, "kcal": 242, "proteina_g": 8.8, "carbos_g": 30.6, "azucar_g": 2.1, "grasa_g": 9.4, "fibra_g": 2.5, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "kuskus", "cantidad": 100, "unidad": "g"}, {"nombre": "woda", "cantidad": 120, "unidad": "g"}, {"nombre": "ogórek", "cantidad": 150, "unidad": "g"}, {"nombre": "pomidor", "cantidad": 150, "unidad": "g"}, {"nombre": "feta", "cantidad": 80, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 10, "unidad": "g"}]}, {"id": "ryz-z-groszkiem-i-jajkiem", "nombre": "Ryż z groszkiem i jajkiem", "minutos": 15, "porciones": 3, "kcal": 249, "proteina_g": 11.3, "carbos_g": 29.7, "azucar_g": 2.5, "grasa_g": 9.0, "fibra_g": 2.6, "alergenos": ["Jaja"], "ingredientes": [{"nombre": "ryż ugotowany", "cantidad": 250, "unidad": "g"}, {"nombre": "groszek zielony", "cantidad": 120, "unidad": "g"}, {"nombre": "jajka", "cantidad": 165, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}]}, {"id": "makaron-z-sosem-pomidorowym", "nombre": "Makaron z sosem pomidorowym", "minutos": 15, "porciones": 3, "kcal": 306, "proteina_g": 12.1, "carbos_g": 45.2, "azucar_g": 5.7, "grasa_g": 8.8, "fibra_g": 3.2, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "makaron penne", "cantidad": 150, "unidad": "g"}, {"nombre": "passata pomidorowa", "cantidad": 250, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 50, "unidad": "g"}, {"nombre": "bazylia świeża", "cantidad": 5, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 10, "unidad": "g"}]}, {"id": "kasza-jeczmienna-z-marchewka", "nombre": "Kasza jęczmienna z marchewką", "minutos": 15, "porciones": 3, "kcal": 194, "proteina_g": 4.2, "carbos_g": 33.1, "azucar_g": 4.5, "grasa_g": 5.6, "fibra_g": 6.5, "alergenos": ["Gluten"], "ingredientes": [{"nombre": "kasza jęczmienna ugotowana", "cantidad": 250, "unidad": "g"}, {"nombre": "marchew", "cantidad": 150, "unidad": "g"}, {"nombre": "groszek zielony", "cantidad": 100, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 15, "unidad": "g"}]}, {"id": "makaron-z-brokulem-i-jogurtem", "nombre": "Makaron z brokułem i jogurtem", "minutos": 15, "porciones": 3, "kcal": 296, "proteina_g": 14.6, "carbos_g": 45.7, "azucar_g": 5.5, "grasa_g": 6.2, "fibra_g": 3.8, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "makaron kokardki", "cantidad": 150, "unidad": "g"}, {"nombre": "brokuł", "cantidad": 250, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 40, "unidad": "g"}]}, {"id": "ryz-z-dynia-i-indykiem", "nombre": "Ryż z dynią i indykiem", "minutos": 15, "porciones": 3, "kcal": 208, "proteina_g": 14.4, "carbos_g": 26.7, "azucar_g": 1.4, "grasa_g": 4.8, "fibra_g": 1.1, "alergenos": [], "ingredientes": [{"nombre": "ryż ugotowany", "cantidad": 250, "unidad": "g"}, {"nombre": "dynia ugotowana", "cantidad": 200, "unidad": "g"}, {"nombre": "pierś z indyka", "cantidad": 150, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}]}, {"id": "kasza-manna-z-musem-sliwkowym", "nombre": "Kasza manna z musem śliwkowym", "minutos": 15, "porciones": 3, "kcal": 189, "proteina_g": 6.9, "carbos_g": 30.8, "azucar_g": 16.8, "grasa_g": 4.8, "fibra_g": 2.4, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "kasza manna", "cantidad": 50, "unidad": "g"}, {"nombre": "mleko", "cantidad": 400, "unidad": "g"}, {"nombre": "śliwki", "cantidad": 200, "unidad": "g"}, {"nombre": "jabłko", "cantidad": 100, "unidad": "g"}]}, {"id": "peczak-z-cukinia-i-koperkiem", "nombre": "Pęczak z cukinią i koperkiem", "minutos": 15, "porciones": 3, "kcal": 204, "proteina_g": 7.0, "carbos_g": 26.2, "azucar_g": 2.3, "grasa_g": 8.5, "fibra_g": 3.9, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "pęczak ugotowany", "cantidad": 250, "unidad": "g"}, {"nombre": "cukinia", "cantidad": 200, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 50, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 10, "unidad": "g"}]}, {"id": "kluski-leniwe-z-musem-jablkowym", "nombre": "Kluski leniwe z musem jabłkowym", "minutos": 25, "porciones": 4, "kcal": 243, "proteina_g": 15.2, "carbos_g": 32.0, "azucar_g": 10.4, "grasa_g": 6.2, "fibra_g": 2.5, "alergenos": ["Gluten", "Jaja", "Mleko"], "ingredientes": [{"nombre": "twaróg półtłusty", "cantidad": 250, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 100, "unidad": "g"}, {"nombre": "jabłka", "cantidad": 300, "unidad": "g"}, {"nombre": "masło", "cantidad": 10, "unidad": "g"}]}, {"id": "kopytka-z-sosem-jogurtowym", "nombre": "Kopytka z sosem jogurtowym", "minutos": 25, "porciones": 4, "kcal": 251, "proteina_g": 9.0, "carbos_g": 45.7, "azucar_g": 3.5, "grasa_g": 3.2, "fibra_g": 2.7, "alergenos": ["Gluten", "Jaja", "Mleko"], "ingredientes": [{"nombre": "ziemniaki ugotowane", "cantidad": 400, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 120, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 200, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}]}, {"id": "makaron-ryzowy-z-warzywami", "nombre": "Makaron ryżowy z warzywami", "minutos": 15, "porciones": 3, "kcal": 243, "proteina_g": 7.6, "carbos_g": 32.4, "azucar_g": 3.3, "grasa_g": 8.9, "fibra_g": 2.2, "alergenos": ["Jaja"], "ingredientes": [{"nombre": "makaron ryżowy", "cantidad": 100, "unidad": "g"}, {"nombre": "marchew", "cantidad": 120, "unidad": "g"}, {"nombre": "cukinia", "cantidad": 150, "unidad": "g"}, {"nombre": "jajka", "cantidad": 110, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 15, "unidad": "g"}]}, {"id": "kasza-jaglana-z-brokulem-i-serem", "nombre": "Kasza jaglana z brokułem i serem", "minutos": 10, "porciones": 3, "kcal": 218, "proteina_g": 9.5, "carbos_g": 25.0, "azucar_g": 1.5, "grasa_g": 9.3, "fibra_g": 3.3, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "kasza jaglana ugotowana", "cantidad": 250, "unidad": "g"}, {"nombre": "brokuł ugotowany", "cantidad": 200, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 60, "unidad": "g"}, {"nombre": "masło", "cantidad": 10, "unidad": "g"}]}, {"id": "kuskus-z-ciecierzyca-i-ogorkiem", "nombre": "Kuskus z ciecierzycą i ogórkiem", "minutos": 10, "porciones": 3, "kcal": 241, "proteina_g": 8.5, "carbos_g": 40.8, "azucar_g": 4.2, "grasa_g": 5.1, "fibra_g": 5.7, "alergenos": ["Gluten"], "ingredientes": [{"nombre": "kuskus", "cantidad": 100, "unidad": "g"}, {"nombre": "woda", "cantidad": 120, "unidad": "g"}, {"nombre": "ciecierzyca z puszki", "cantidad": 150, "unidad": "g"}, {"nombre": "ogórek", "cantidad": 150, "unidad": "g"}, {"nombre": "pomidor", "cantidad": 150, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 10, "unidad": "g"}]}, {"id": "lazanki-z-kapusta-i-pieczarkami", "nombre": "Łazanki z kapustą i pieczarkami", "minutos": 30, "porciones": 4, "kcal": 219, "proteina_g": 7.6, "carbos_g": 35.4, "azucar_g": 5.0, "grasa_g": 5.8, "fibra_g": 3.8, "alergenos": ["Gluten"], "ingredientes": [{"nombre": "makaron łazanki", "cantidad": 150, "unidad": "g"}, {"nombre": "kapusta biała", "cantidad": 300, "unidad": "g"}, {"nombre": "pieczarki", "cantidad": 200, "unidad": "g"}, {"nombre": "cebula", "cantidad": 60, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 20, "unidad": "g"}]}, {"id": "pierogi-z-ziemniakami-i-twarogiem", "nombre": "Pierogi z ziemniakami i twarogiem", "minutos": 15, "porciones": 3, "kcal": 301, "proteina_g": 9.8, "carbos_g": 43.5, "azucar_g": 5.4, "grasa_g": 9.8, "fibra_g": 1.4, "alergenos": ["Gluten", "Mleko", "Jaja"], "ingredientes": [{"nombre": "pierogi ruskie", "cantidad": 400, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}, {"nombre": "ogórek", "cantidad": 100, "unidad": "g"}]}, {"id": "slupki-marchewki-z-dipem-jogurtowym", "nombre": "Słupki marchewki z dipem jogurtowym", "minutos": 10, "porciones": 3, "kcal": 77, "proteina_g": 3.4, "carbos_g": 12.2, "azucar_g": 7.2, "grasa_g": 1.8, "fibra_g": 2.8, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "marchew", "cantidad": 300, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}, {"nombre": "koperek", "cantidad": 5, "unidad": "g"}, {"nombre": "sok z cytryny", "cantidad": 5, "unidad": "g"}]}, {"id": "ogorek-z-twarozkiem-koperkowym", "nombre": "Ogórek z twarożkiem koperkowym", "minutos": 10, "porciones": 4, "kcal": 96, "proteina_g": 11.8, "carbos_g": 6.0, "azucar_g": 4.4, "grasa_g": 3.0, "fibra_g": 0.4, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "ogórek", "cantidad": 300, "unidad": "g"}, {"nombre": "twaróg półtłusty", "cantidad": 250, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 50, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}]}, {"id": "rzodkiewki-z-pasta-jajeczna", "nombre": "Rzodkiewki z pastą jajeczną", "minutos": 10, "porciones": 3, "kcal": 111, "proteina_g": 8.5, "carbos_g": 4.0, "azucar_g": 2.9, "grasa_g": 6.5, "fibra_g": 1.2, "alergenos": ["Jaja", "Mleko"], "ingredientes": [{"nombre": "rzodkiewka", "cantidad": 200, "unidad": "g"}, {"nombre": "jajka ugotowane na twardo", "cantidad": 165, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 60, "unidad": "g"}, {"nombre": "szczypiorek", "cantidad": 10, "unidad": "g"}]}, {"id": "papryka-z-hummusem", "nombre": "Papryka z hummusem", "minutos": 10, "porciones": 4, "kcal": 141, "proteina_g": 5.9, "carbos_g": 20.2, "azucar_g": 6.9, "grasa_g": 4.9, "fibra_g": 5.6, "alergenos": ["Sezam", "Mleko"], "ingredientes": [{"nombre": "papryka czerwona", "cantidad": 300, "unidad": "g"}, {"nombre": "ogórek", "cantidad": 150, "unidad": "g"}, {"nombre": "ciecierzyca z puszki", "cantidad": 240, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 60, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 10, "unidad": "g"}]}, {"id": "brokul-z-dipem-serowym", "nombre": "Brokuł z dipem serowym", "minutos": 10, "porciones": 4, "kcal": 176, "proteina_g": 5.4, "carbos_g": 8.8, "azucar_g": 3.7, "grasa_g": 14.0, "fibra_g": 2.5, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "brokuł ugotowany", "cantidad": 300, "unidad": "g"}, {"nombre": "serek śmietankowy", "cantidad": 150, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 100, "unidad": "g"}, {"nombre": "szczypiorek", "cantidad": 10, "unidad": "g"}]}, {"id": "kalafior-z-sosem-koperkowym", "nombre": "Kalafior z sosem koperkowym", "minutos": 10, "porciones": 4, "kcal": 47, "proteina_g": 3.5, "carbos_g": 5.6, "azucar_g": 3.7, "grasa_g": 1.5, "fibra_g": 2.1, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "kalafior ugotowany", "cantidad": 350, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}, {"nombre": "sok z cytryny", "cantidad": 10, "unidad": "g"}]}, {"id": "pieczone-frytki-z-marchewki", "nombre": "Pieczone frytki z marchewki", "minutos": 35, "porciones": 4, "kcal": 123, "proteina_g": 3.1, "carbos_g": 14.0, "azucar_g": 7.8, "grasa_g": 6.5, "fibra_g": 3.6, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "marchew", "cantidad": 500, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 20, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}]}, {"id": "frytki-z-cukinii-z-jogurtem", "nombre": "Frytki z cukinii z jogurtem", "minutos": 20, "porciones": 4, "kcal": 144, "proteina_g": 6.8, "carbos_g": 15.9, "azucar_g": 5.4, "grasa_g": 6.0, "fibra_g": 1.7, "alergenos": ["Jaja", "Gluten", "Mleko"], "ingredientes": [{"nombre": "cukinia", "cantidad": 400, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "bułka tarta", "cantidad": 60, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}]}, {"id": "pomidorowe-lodeczki-z-twarozkiem", "nombre": "Pomidorowe łódeczki z twarożkiem", "minutos": 10, "porciones": 4, "kcal": 86, "proteina_g": 9.9, "carbos_g": 6.5, "azucar_g": 5.2, "grasa_g": 2.5, "fibra_g": 1.3, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "pomidor", "cantidad": 400, "unidad": "g"}, {"nombre": "twaróg półtłusty", "cantidad": 200, "unidad": "g"}, {"nombre": "szczypiorek", "cantidad": 10, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 40, "unidad": "g"}]}, {"id": "groszek-z-dipem-z-bialej-fasoli", "nombre": "Groszek z dipem z białej fasoli", "minutos": 10, "porciones": 4, "kcal": 136, "proteina_g": 6.6, "carbos_g": 19.2, "azucar_g": 3.5, "grasa_g": 4.1, "fibra_g": 4.9, "alergenos": [], "ingredientes": [{"nombre": "groszek zielony mrożony", "cantidad": 200, "unidad": "g"}, {"nombre": "biała fasola z puszki", "cantidad": 200, "unidad": "g"}, {"nombre": "sok z cytryny", "cantidad": 20, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 15, "unidad": "g"}, {"nombre": "ogórek", "cantidad": 200, "unidad": "g"}]}, {"id": "placuszki-z-kalafiora-do-maczania", "nombre": "Placuszki z kalafiora do maczania", "minutos": 15, "porciones": 4, "kcal": 170, "proteina_g": 8.2, "carbos_g": 16.6, "azucar_g": 3.6, "grasa_g": 8.0, "fibra_g": 2.1, "alergenos": ["Jaja", "Gluten", "Mleko"], "ingredientes": [{"nombre": "kalafior ugotowany", "cantidad": 300, "unidad": "g"}, {"nombre": "jajko", "cantidad": 110, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 60, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 15, "unidad": "g"}]}, {"id": "pieczone-slupki-batata-z-dipem", "nombre": "Pieczone słupki batata z dipem", "minutos": 35, "porciones": 4, "kcal": 181, "proteina_g": 4.0, "carbos_g": 27.8, "azucar_g": 7.4, "grasa_g": 6.2, "fibra_g": 3.9, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "batat", "cantidad": 500, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 20, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}, {"nombre": "ogórek", "cantidad": 80, "unidad": "g"}, {"nombre": "koperek", "cantidad": 5, "unidad": "g"}]}, {"id": "ogorkowe-krazki-z-pasta-z-groszku", "nombre": "Ogórkowe krążki z pastą z groszku", "minutos": 10, "porciones": 4, "kcal": 129, "proteina_g": 4.1, "carbos_g": 9.5, "azucar_g": 4.3, "grasa_g": 8.8, "fibra_g": 2.5, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "ogórek", "cantidad": 300, "unidad": "g"}, {"nombre": "groszek zielony", "cantidad": 150, "unidad": "g"}, {"nombre": "serek śmietankowy", "cantidad": 100, "unidad": "g"}, {"nombre": "sok z cytryny", "cantidad": 10, "unidad": "g"}]}, {"id": "papryka-faszerowana-serkiem", "nombre": "Papryka faszerowana serkiem", "minutos": 10, "porciones": 4, "kcal": 205, "proteina_g": 4.3, "carbos_g": 9.6, "azucar_g": 6.5, "grasa_g": 17.6, "fibra_g": 2.3, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "papryka czerwona", "cantidad": 400, "unidad": "g"}, {"nombre": "serek śmietankowy", "cantidad": 200, "unidad": "g"}, {"nombre": "szczypiorek", "cantidad": 10, "unidad": "g"}, {"nombre": "ogórek", "cantidad": 80, "unidad": "g"}]}, {"id": "buraczki-z-jogurtem-i-jablkiem", "nombre": "Buraczki z jogurtem i jabłkiem", "minutos": 10, "porciones": 4, "kcal": 95, "proteina_g": 3.0, "carbos_g": 13.3, "azucar_g": 10.7, "grasa_g": 3.8, "fibra_g": 2.1, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "burak gotowany", "cantidad": 250, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}, {"nombre": "jabłko", "cantidad": 150, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 10, "unidad": "g"}]}, {"id": "salatka-z-pomidora-i-ogorka", "nombre": "Sałatka z pomidora i ogórka", "minutos": 10, "porciones": 4, "kcal": 41, "proteina_g": 2.4, "carbos_g": 6.6, "azucar_g": 4.3, "grasa_g": 1.0, "fibra_g": 1.3, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "pomidor", "cantidad": 300, "unidad": "g"}, {"nombre": "ogórek", "cantidad": 250, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 100, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}]}, {"id": "pieczone-rozyczki-brokulu-z-dipem", "nombre": "Pieczone różyczki brokułu z dipem", "minutos": 30, "porciones": 4, "kcal": 105, "proteina_g": 4.7, "carbos_g": 8.7, "azucar_g": 3.6, "grasa_g": 6.5, "fibra_g": 2.7, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "brokuł", "cantidad": 400, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 20, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}]}, {"id": "marchewka-z-pasta-z-soczewicy", "nombre": "Marchewka z pastą z soczewicy", "minutos": 10, "porciones": 4, "kcal": 126, "proteina_g": 5.4, "carbos_g": 18.2, "azucar_g": 5.1, "grasa_g": 4.2, "fibra_g": 6.4, "alergenos": [], "ingredientes": [{"nombre": "marchew", "cantidad": 300, "unidad": "g"}, {"nombre": "soczewica czerwona ugotowana", "cantidad": 200, "unidad": "g"}, {"nombre": "pomidor", "cantidad": 100, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 15, "unidad": "g"}]}, {"id": "kalarepka-z-dipem-twarogowym", "nombre": "Kalarepka z dipem twarogowym", "minutos": 10, "porciones": 4, "kcal": 87, "proteina_g": 9.2, "carbos_g": 8.4, "azucar_g": 5.0, "grasa_g": 2.4, "fibra_g": 3.2, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "kalarepka", "cantidad": 350, "unidad": "g"}, {"nombre": "twaróg półtłusty", "cantidad": 150, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 100, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}]}, {"id": "pieczona-dynia-z-dipem-ziolowym", "nombre": "Pieczona dynia z dipem ziołowym", "minutos": 35, "porciones": 4, "kcal": 104, "proteina_g": 3.2, "carbos_g": 10.2, "azucar_g": 5.3, "grasa_g": 6.3, "fibra_g": 0.7, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "dynia hokkaido", "cantidad": 500, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 20, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}]}, {"id": "jogurt-z-jablkiem-i-platkami-owsianymi", "nombre": "Jogurt z jabłkiem i płatkami owsianymi", "minutos": 10, "porciones": 3, "kcal": 173, "proteina_g": 7.1, "carbos_g": 27.8, "azucar_g": 14.0, "grasa_g": 4.1, "fibra_g": 3.3, "alergenos": ["Mleko", "Gluten"], "ingredientes": [{"nombre": "jogurt naturalny", "cantidad": 300, "unidad": "g"}, {"nombre": "jabłko", "cantidad": 150, "unidad": "g"}, {"nombre": "płatki owsiane", "cantidad": 40, "unidad": "g"}, {"nombre": "banan", "cantidad": 90, "unidad": "g"}]}, {"id": "serek-wiejski-z-gruszka", "nombre": "Serek wiejski z gruszką", "minutos": 10, "porciones": 2, "kcal": 214, "proteina_g": 14.5, "carbos_g": 25.2, "azucar_g": 10.9, "grasa_g": 6.3, "fibra_g": 3.8, "alergenos": ["Mleko", "Gluten"], "ingredientes": [{"nombre": "serek wiejski", "cantidad": 200, "unidad": "g"}, {"nombre": "gruszka", "cantidad": 150, "unidad": "g"}, {"nombre": "płatki owsiane", "cantidad": 30, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 50, "unidad": "g"}]}, {"id": "owsianka-nocna-z-malinami", "nombre": "Gotowa owsianka nocna z malinami", "minutos": 10, "porciones": 3, "kcal": 181, "proteina_g": 7.0, "carbos_g": 31.2, "azucar_g": 7.4, "grasa_g": 3.7, "fibra_g": 5.4, "alergenos": ["Mleko", "Gluten"], "ingredientes": [{"nombre": "owsianka nocna (płatki owsiane namoczone w mleku)", "cantidad": 200, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 100, "unidad": "g"}, {"nombre": "maliny", "cantidad": 100, "unidad": "g"}, {"nombre": "banan", "cantidad": 100, "unidad": "g"}]}, {"id": "pudding-chia-z-truskawkami", "nombre": "Gotowy pudding chia z truskawkami", "minutos": 10, "porciones": 3, "kcal": 151, "proteina_g": 5.5, "carbos_g": 20.2, "azucar_g": 7.4, "grasa_g": 6.2, "fibra_g": 6.3, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "pudding chia (nasiona chia namoczone w mleku)", "cantidad": 200, "unidad": "g"}, {"nombre": "mleko", "cantidad": 80, "unidad": "g"}, {"nombre": "truskawki", "cantidad": 120, "unidad": "g"}, {"nombre": "banan", "cantidad": 100, "unidad": "g"}]}, {"id": "kefir-z-bananem-i-borowkami", "nombre": "Kefir z bananem i borówkami", "minutos": 10, "porciones": 2, "kcal": 196, "proteina_g": 7.4, "carbos_g": 35.1, "azucar_g": 18.9, "grasa_g": 4.0, "fibra_g": 3.8, "alergenos": ["Mleko", "Gluten"], "ingredientes": [{"nombre": "kefir", "cantidad": 300, "unidad": "g"}, {"nombre": "banan", "cantidad": 120, "unidad": "g"}, {"nombre": "borówki", "cantidad": 100, "unidad": "g"}, {"nombre": "płatki owsiane błyskawiczne", "cantidad": 20, "unidad": "g"}]}, {"id": "deser-twarogowy-ze-sliwka", "nombre": "Deser twarogowy ze śliwką", "minutos": 10, "porciones": 3, "kcal": 152, "proteina_g": 14.2, "carbos_g": 14.6, "azucar_g": 9.4, "grasa_g": 4.2, "fibra_g": 1.4, "alergenos": ["Mleko", "Gluten"], "ingredientes": [{"nombre": "twaróg półtłusty", "cantidad": 200, "unidad": "g"}, {"nombre": "śliwki", "cantidad": 150, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 100, "unidad": "g"}, {"nombre": "płatki owsiane", "cantidad": 20, "unidad": "g"}]}, {"id": "salatka-owocowa-z-jogurtem", "nombre": "Sałatka owocowa z jogurtem", "minutos": 10, "porciones": 4, "kcal": 87, "proteina_g": 2.4, "carbos_g": 17.8, "azucar_g": 13.4, "grasa_g": 1.4, "fibra_g": 2.7, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "jabłko", "cantidad": 150, "unidad": "g"}, {"nombre": "gruszka", "cantidad": 150, "unidad": "g"}, {"nombre": "mandarynki", "cantidad": 150, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}]}, {"id": "kulki-owsiane-z-daktylami", "nombre": "Kulki owsiane z daktylami", "minutos": 20, "porciones": 3, "kcal": 407, "proteina_g": 9.3, "carbos_g": 58.8, "azucar_g": 28.3, "grasa_g": 17.7, "fibra_g": 8.8, "alergenos": ["Gluten"], "ingredientes": [{"nombre": "płatki owsiane", "cantidad": 100, "unidad": "g"}, {"nombre": "daktyle", "cantidad": 120, "unidad": "g"}, {"nombre": "pasta ze słonecznika", "cantidad": 60, "unidad": "g"}, {"nombre": "wiórki kokosowe bez cukru", "cantidad": 20, "unidad": "g"}]}, {"id": "kanapeczki-z-wafli-ryzowych-z-twarogiem", "nombre": "Kanapeczki z wafli ryżowych z twarogiem", "minutos": 10, "porciones": 3, "kcal": 148, "proteina_g": 13.4, "carbos_g": 16.0, "azucar_g": 4.3, "grasa_g": 3.5, "fibra_g": 0.8, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "wafle ryżowe", "cantidad": 40, "unidad": "g"}, {"nombre": "twaróg półtłusty", "cantidad": 200, "unidad": "g"}, {"nombre": "ogórek", "cantidad": 150, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 40, "unidad": "g"}]}, {"id": "deser-jogurtowy-z-musem-malinowym", "nombre": "Deser jogurtowy z musem malinowym", "minutos": 10, "porciones": 3, "kcal": 163, "proteina_g": 7.1, "carbos_g": 25.4, "azucar_g": 11.4, "grasa_g": 4.1, "fibra_g": 5.1, "alergenos": ["Mleko", "Gluten"], "ingredientes": [{"nombre": "jogurt naturalny", "cantidad": 300, "unidad": "g"}, {"nombre": "maliny", "cantidad": 150, "unidad": "g"}, {"nombre": "banan", "cantidad": 100, "unidad": "g"}, {"nombre": "płatki owsiane błyskawiczne", "cantidad": 30, "unidad": "g"}]}, {"id": "twarogowa-pasta-z-morela", "nombre": "Twarogowa pasta z morelą", "minutos": 10, "porciones": 3, "kcal": 166, "proteina_g": 14.5, "carbos_g": 18.0, "azucar_g": 9.0, "grasa_g": 4.1, "fibra_g": 1.4, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "twaróg półtłusty", "cantidad": 200, "unidad": "g"}, {"nombre": "morele", "cantidad": 150, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 100, "unidad": "g"}, {"nombre": "wafle ryżowe", "cantidad": 30, "unidad": "g"}]}, {"id": "salatka-z-ciecierzycy-i-pomidora", "nombre": "Sałatka z ciecierzycy i pomidora", "minutos": 10, "porciones": 3, "kcal": 176, "proteina_g": 6.7, "carbos_g": 22.6, "azucar_g": 5.8, "grasa_g": 7.4, "fibra_g": 6.3, "alergenos": [], "ingredientes": [{"nombre": "ciecierzyca z puszki", "cantidad": 240, "unidad": "g"}, {"nombre": "pomidor", "cantidad": 200, "unidad": "g"}, {"nombre": "ogórek", "cantidad": 150, "unidad": "g"}, {"nombre": "natka pietruszki", "cantidad": 10, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 15, "unidad": "g"}]}, {"id": "miseczka-z-mozzarella-i-ogorkiem", "nombre": "Miseczka z mozzarellą i ogórkiem", "minutos": 10, "porciones": 3, "kcal": 296, "proteina_g": 19.3, "carbos_g": 5.8, "azucar_g": 2.2, "grasa_g": 21.9, "fibra_g": 0.9, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "mozzarella", "cantidad": 250, "unidad": "g"}, {"nombre": "ogórek", "cantidad": 150, "unidad": "g"}, {"nombre": "pomidorki koktajlowe", "cantidad": 150, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 10, "unidad": "g"}, {"nombre": "bazylia świeża", "cantidad": 5, "unidad": "g"}]}, {"id": "kulki-kokosowe-ze-sliwkami-suszonymi", "nombre": "Kulki kokosowe ze śliwkami suszonymi", "minutos": 20, "porciones": 3, "kcal": 392, "proteina_g": 6.7, "carbos_g": 64.5, "azucar_g": 5.0, "grasa_g": 15.0, "fibra_g": 6.6, "alergenos": ["Gluten"], "ingredientes": [{"nombre": "wiórki kokosowe", "cantidad": 60, "unidad": "g"}, {"nombre": "śliwki suszone", "cantidad": 120, "unidad": "g"}, {"nombre": "płatki owsiane", "cantidad": 80, "unidad": "g"}, {"nombre": "banan", "cantidad": 80, "unidad": "g"}]}, {"id": "owsianka-nocna-z-kakao-i-bananem", "nombre": "Gotowa owsianka nocna z kakao i bananem", "minutos": 10, "porciones": 2, "kcal": 285, "proteina_g": 10.8, "carbos_g": 50.9, "azucar_g": 9.1, "grasa_g": 6.0, "fibra_g": 7.5, "alergenos": ["Mleko", "Gluten"], "ingredientes": [{"nombre": "owsianka nocna (płatki owsiane namoczone w mleku)", "cantidad": 250, "unidad": "g"}, {"nombre": "mleko", "cantidad": 50, "unidad": "g"}, {"nombre": "banan", "cantidad": 120, "unidad": "g"}, {"nombre": "kakao naturalne", "cantidad": 8, "unidad": "g"}]}, {"id": "deser-z-ricotty-i-brzoskwini", "nombre": "Deser z ricotty i brzoskwini", "minutos": 10, "porciones": 3, "kcal": 212, "proteina_g": 9.8, "carbos_g": 20.9, "azucar_g": 7.6, "grasa_g": 10.3, "fibra_g": 2.0, "alergenos": ["Mleko", "Gluten"], "ingredientes": [{"nombre": "ricotta", "cantidad": 250, "unidad": "g"}, {"nombre": "brzoskwinie", "cantidad": 200, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 100, "unidad": "g"}, {"nombre": "płatki owsiane błyskawiczne", "cantidad": 30, "unidad": "g"}]}, {"id": "salatka-z-fasoli-i-kukurydzy", "nombre": "Sałatka z fasoli i kukurydzy", "minutos": 10, "porciones": 3, "kcal": 184, "proteina_g": 7.9, "carbos_g": 25.8, "azucar_g": 6.4, "grasa_g": 6.5, "fibra_g": 5.9, "alergenos": [], "ingredientes": [{"nombre": "czerwona fasola z puszki", "cantidad": 240, "unidad": "g"}, {"nombre": "kukurydza z puszki", "cantidad": 140, "unidad": "g"}, {"nombre": "pomidor", "cantidad": 150, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 15, "unidad": "g"}]}, {"id": "kanapeczki-ogorkowe-z-serkiem", "nombre": "Kanapeczki ogórkowe z serkiem", "minutos": 10, "porciones": 3, "kcal": 192, "proteina_g": 3.8, "carbos_g": 6.6, "azucar_g": 3.6, "grasa_g": 17.4, "fibra_g": 0.8, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "ogórek", "cantidad": 250, "unidad": "g"}, {"nombre": "serek śmietankowy", "cantidad": 150, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}, {"nombre": "rzodkiewka", "cantidad": 50, "unidad": "g"}]}, {"id": "pudding-chia-z-musem-gruszkowym", "nombre": "Gotowy pudding chia z musem gruszkowym", "minutos": 10, "porciones": 3, "kcal": 180, "proteina_g": 6.2, "carbos_g": 26.2, "azucar_g": 7.6, "grasa_g": 6.5, "fibra_g": 7.7, "alergenos": ["Mleko", "Gluten"], "ingredientes": [{"nombre": "pudding chia (nasiona chia namoczone w mleku)", "cantidad": 200, "unidad": "g"}, {"nombre": "mleko", "cantidad": 60, "unidad": "g"}, {"nombre": "gruszka", "cantidad": 200, "unidad": "g"}, {"nombre": "płatki owsiane", "cantidad": 30, "unidad": "g"}]}, {"id": "salatka-z-gotowanego-buraka-i-jablka", "nombre": "Sałatka z gotowanego buraka i jabłka", "minutos": 10, "porciones": 3, "kcal": 98, "proteina_g": 4.0, "carbos_g": 17.7, "azucar_g": 14.3, "grasa_g": 1.7, "fibra_g": 2.9, "alergenos": ["Mleko"], "ingredientes": [{"nombre": "burak gotowany", "cantidad": 250, "unidad": "g"}, {"nombre": "jabłko", "cantidad": 150, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}, {"nombre": "sok z cytryny", "cantidad": 10, "unidad": "g"}]}, {"id": "zupa-pomidorowa-z-makaronem", "nombre": "Zupa pomidorowa z makaronem", "minutos": 20, "porciones": 4, "kcal": 207, "proteina_g": 7.1, "carbos_g": 34.7, "azucar_g": 9.8, "grasa_g": 5.3, "fibra_g": 3.9, "alergenos": ["Gluten", "Mleko", "Seler"], "ingredientes": [{"nombre": "passata pomidorowa", "cantidad": 500, "unidad": "g"}, {"nombre": "bulion warzywny", "cantidad": 500, "unidad": "g"}, {"nombre": "makaron drobny", "cantidad": 100, "unidad": "g"}, {"nombre": "marchewka", "cantidad": 100, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 100, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 15, "unidad": "g"}]}, {"id": "krem-z-dyni-z-grzankami", "nombre": "Krem z dyni z grzankami", "minutos": 30, "porciones": 4, "kcal": 171, "proteina_g": 5.3, "carbos_g": 27.0, "azucar_g": 6.8, "grasa_g": 5.4, "fibra_g": 2.0, "alergenos": ["Gluten", "Mleko", "Seler"], "ingredientes": [{"nombre": "dynia hokkaido", "cantidad": 500, "unidad": "g"}, {"nombre": "ziemniak", "cantidad": 150, "unidad": "g"}, {"nombre": "bulion warzywny", "cantidad": 500, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 100, "unidad": "g"}, {"nombre": "chleb pszenny", "cantidad": 80, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 15, "unidad": "g"}]}, {"id": "kotleciki-z-indyka-i-cukinii", "nombre": "Kotleciki z indyka i cukinii", "minutos": 25, "porciones": 4, "kcal": 267, "proteina_g": 23.6, "carbos_g": 10.4, "azucar_g": 2.8, "grasa_g": 14.7, "fibra_g": 1.3, "alergenos": ["Jaja", "Gluten"], "ingredientes": [{"nombre": "mięso mielone z indyka", "cantidad": 400, "unidad": "g"}, {"nombre": "cukinia", "cantidad": 250, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "bułka tarta", "cantidad": 40, "unidad": "g"}, {"nombre": "cebula", "cantidad": 50, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 20, "unidad": "g"}]}, {"id": "pulpeciki-drobiowe-w-sosie-koperkowym", "nombre": "Pulpeciki drobiowe w sosie koperkowym", "minutos": 30, "porciones": 4, "kcal": 261, "proteina_g": 23.1, "carbos_g": 16.2, "azucar_g": 2.6, "grasa_g": 11.1, "fibra_g": 0.3, "alergenos": ["Jaja", "Gluten", "Mleko"], "ingredientes": [{"nombre": "mięso mielone z kurczaka", "cantidad": 400, "unidad": "g"}, {"nombre": "ryż ugotowany", "cantidad": 150, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 200, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 15, "unidad": "g"}, {"nombre": "woda", "cantidad": 300, "unidad": "g"}]}, {"id": "ryba-pieczona-z-warzywami", "nombre": "Ryba pieczona z warzywami", "minutos": 30, "porciones": 4, "kcal": 157, "proteina_g": 19.0, "carbos_g": 6.7, "azucar_g": 3.9, "grasa_g": 6.0, "fibra_g": 2.0, "alergenos": ["Ryby"], "ingredientes": [{"nombre": "filet z dorsza bez ości", "cantidad": 400, "unidad": "g"}, {"nombre": "marchewka", "cantidad": 200, "unidad": "g"}, {"nombre": "cukinia", "cantidad": 250, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 20, "unidad": "g"}, {"nombre": "sok z cytryny", "cantidad": 15, "unidad": "g"}]}, {"id": "pierogi-z-serem-i-musem-owocowym", "nombre": "Pierogi z serem i musem owocowym", "minutos": 20, "porciones": 4, "kcal": 278, "proteina_g": 8.3, "carbos_g": 44.7, "azucar_g": 10.7, "grasa_g": 7.8, "fibra_g": 3.1, "alergenos": ["Gluten", "Mleko", "Jaja"], "ingredientes": [{"nombre": "pierogi z twarogiem", "cantidad": 400, "unidad": "g"}, {"nombre": "truskawki mrożone", "cantidad": 300, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 200, "unidad": "g"}, {"nombre": "banan", "cantidad": 100, "unidad": "g"}]}, {"id": "placki-z-gotowanych-ziemniakow", "nombre": "Placki z gotowanych ziemniaków", "minutos": 15, "porciones": 4, "kcal": 275, "proteina_g": 7.3, "carbos_g": 38.6, "azucar_g": 3.1, "grasa_g": 10.2, "fibra_g": 2.7, "alergenos": ["Jaja", "Gluten", "Mleko"], "ingredientes": [{"nombre": "ziemniaki ugotowane", "cantidad": 500, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "mąka pszenna", "cantidad": 60, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 30, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}]}, {"id": "kotleciki-z-soczewicy-i-marchewki", "nombre": "Kotleciki z soczewicy i marchewki", "minutos": 20, "porciones": 4, "kcal": 261, "proteina_g": 12.9, "carbos_g": 34.0, "azucar_g": 4.9, "grasa_g": 8.7, "fibra_g": 9.7, "alergenos": ["Jaja", "Gluten"], "ingredientes": [{"nombre": "soczewica ugotowana", "cantidad": 400, "unidad": "g"}, {"nombre": "marchewka", "cantidad": 150, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "bułka tarta", "cantidad": 50, "unidad": "g"}, {"nombre": "cebula", "cantidad": 50, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 25, "unidad": "g"}]}, {"id": "makaron-z-kurczakiem-i-brokulem", "nombre": "Makaron z kurczakiem i brokułem", "minutos": 15, "porciones": 4, "kcal": 331, "proteina_g": 24.6, "carbos_g": 43.4, "azucar_g": 4.3, "grasa_g": 6.1, "fibra_g": 3.2, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "makaron penne", "cantidad": 200, "unidad": "g"}, {"nombre": "pierś z kurczaka ugotowana", "cantidad": 200, "unidad": "g"}, {"nombre": "brokuł", "cantidad": 250, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 10, "unidad": "g"}]}, {"id": "zupa-ogorkowa-z-ziemniakami", "nombre": "Zupa ogórkowa z ziemniakami", "minutos": 30, "porciones": 5, "kcal": 95, "proteina_g": 3.3, "carbos_g": 19.1, "azucar_g": 3.8, "grasa_g": 0.9, "fibra_g": 2.7, "alergenos": ["Mleko", "Seler"], "ingredientes": [{"nombre": "ogórki kiszone", "cantidad": 200, "unidad": "g"}, {"nombre": "ziemniaki", "cantidad": 400, "unidad": "g"}, {"nombre": "marchewka", "cantidad": 100, "unidad": "g"}, {"nombre": "bulion warzywny", "cantidad": 700, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 100, "unidad": "g"}]}, {"id": "jajka-w-sosie-pomidorowym", "nombre": "Jajka w sosie pomidorowym", "minutos": 15, "porciones": 4, "kcal": 235, "proteina_g": 11.4, "carbos_g": 25.4, "azucar_g": 7.3, "grasa_g": 10.2, "fibra_g": 2.9, "alergenos": ["Jaja", "Gluten"], "ingredientes": [{"nombre": "jajka", "cantidad": 220, "unidad": "g"}, {"nombre": "passata pomidorowa", "cantidad": 400, "unidad": "g"}, {"nombre": "cebula", "cantidad": 50, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 15, "unidad": "g"}, {"nombre": "chleb pszenny", "cantidad": 120, "unidad": "g"}]}, {"id": "kasza-z-warzywami-i-feta", "nombre": "Kasza z warzywami i fetą", "minutos": 15, "porciones": 4, "kcal": 242, "proteina_g": 7.0, "carbos_g": 33.1, "azucar_g": 3.2, "grasa_g": 9.9, "fibra_g": 5.0, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "kasza jęczmienna ugotowana", "cantidad": 400, "unidad": "g"}, {"nombre": "cukinia", "cantidad": 250, "unidad": "g"}, {"nombre": "pomidor", "cantidad": 200, "unidad": "g"}, {"nombre": "ser feta", "cantidad": 100, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 15, "unidad": "g"}]}, {"id": "zapiekanka-ziemniaczana-z-kalafiorem", "nombre": "Zapiekanka ziemniaczana z kalafiorem", "minutos": 30, "porciones": 4, "kcal": 265, "proteina_g": 13.8, "carbos_g": 31.7, "azucar_g": 5.7, "grasa_g": 9.9, "fibra_g": 4.5, "alergenos": ["Mleko", "Jaja"], "ingredientes": [{"nombre": "ziemniaki ugotowane", "cantidad": 500, "unidad": "g"}, {"nombre": "kalafior ugotowany", "cantidad": 400, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 100, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 150, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}]}, {"id": "ryz-z-warzywami-i-kurczakiem", "nombre": "Ryż z warzywami i kurczakiem", "minutos": 15, "porciones": 4, "kcal": 241, "proteina_g": 18.2, "carbos_g": 28.1, "azucar_g": 3.1, "grasa_g": 5.7, "fibra_g": 2.5, "alergenos": [], "ingredientes": [{"nombre": "ryż ugotowany", "cantidad": 300, "unidad": "g"}, {"nombre": "pierś z kurczaka ugotowana", "cantidad": 200, "unidad": "g"}, {"nombre": "marchewka", "cantidad": 150, "unidad": "g"}, {"nombre": "groszek mrożony", "cantidad": 100, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 15, "unidad": "g"}]}, {"id": "kopytka-z-brokulem-i-maslem", "nombre": "Kopytka z brokułem i masłem", "minutos": 15, "porciones": 4, "kcal": 274, "proteina_g": 7.4, "carbos_g": 45.7, "azucar_g": 2.0, "grasa_g": 7.3, "fibra_g": 4.1, "alergenos": ["Gluten", "Jaja", "Mleko"], "ingredientes": [{"nombre": "kopytka", "cantidad": 500, "unidad": "g"}, {"nombre": "brokuł", "cantidad": 250, "unidad": "g"}, {"nombre": "masło", "cantidad": 30, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}]}, {"id": "gulasz-z-ciecierzycy-i-pomidorow", "nombre": "Gulasz z ciecierzycy i pomidorów", "minutos": 20, "porciones": 4, "kcal": 250, "proteina_g": 9.4, "carbos_g": 38.2, "azucar_g": 12.1, "grasa_g": 8.1, "fibra_g": 10.0, "alergenos": [], "ingredientes": [{"nombre": "ciecierzyca z puszki", "cantidad": 400, "unidad": "g"}, {"nombre": "passata pomidorowa", "cantidad": 400, "unidad": "g"}, {"nombre": "marchewka", "cantidad": 200, "unidad": "g"}, {"nombre": "cebula", "cantidad": 80, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 20, "unidad": "g"}, {"nombre": "woda", "cantidad": 100, "unidad": "g"}]}, {"id": "omlet-warzywny-na-kolacje", "nombre": "Omlet warzywny na kolację", "minutos": 15, "porciones": 3, "kcal": 239, "proteina_g": 17.4, "carbos_g": 3.8, "azucar_g": 2.3, "grasa_g": 17.1, "fibra_g": 1.1, "alergenos": ["Jaja", "Mleko"], "ingredientes": [{"nombre": "jajka", "cantidad": 275, "unidad": "g"}, {"nombre": "papryka czerwona", "cantidad": 100, "unidad": "g"}, {"nombre": "szpinak świeży", "cantidad": 60, "unidad": "g"}, {"nombre": "ser żółty", "cantidad": 60, "unidad": "g"}, {"nombre": "masło", "cantidad": 10, "unidad": "g"}]}, {"id": "zupa-krem-z-brokulu", "nombre": "Zupa krem z brokułu", "minutos": 25, "porciones": 4, "kcal": 129, "proteina_g": 5.7, "carbos_g": 20.2, "azucar_g": 4.3, "grasa_g": 3.8, "fibra_g": 3.9, "alergenos": ["Mleko", "Seler"], "ingredientes": [{"nombre": "brokuł", "cantidad": 400, "unidad": "g"}, {"nombre": "ziemniak", "cantidad": 250, "unidad": "g"}, {"nombre": "bulion warzywny", "cantidad": 600, "unidad": "g"}, {"nombre": "jogurt naturalny", "cantidad": 100, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 10, "unidad": "g"}]}, {"id": "makaron-z-sosem-z-cukinii", "nombre": "Makaron z sosem z cukinii", "minutos": 15, "porciones": 4, "kcal": 313, "proteina_g": 9.4, "carbos_g": 42.0, "azucar_g": 4.8, "grasa_g": 12.2, "fibra_g": 2.7, "alergenos": ["Gluten", "Mleko"], "ingredientes": [{"nombre": "makaron świderki", "cantidad": 200, "unidad": "g"}, {"nombre": "cukinia", "cantidad": 400, "unidad": "g"}, {"nombre": "serek śmietankowy", "cantidad": 100, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}, {"nombre": "oliwa z oliwek", "cantidad": 10, "unidad": "g"}]}, {"id": "kotleciki-rybne-z-koperkiem", "nombre": "Kotleciki rybne z koperkiem", "minutos": 20, "porciones": 4, "kcal": 259, "proteina_g": 21.6, "carbos_g": 22.5, "azucar_g": 1.3, "grasa_g": 8.8, "fibra_g": 1.9, "alergenos": ["Ryby", "Jaja", "Gluten"], "ingredientes": [{"nombre": "filet z dorsza ugotowany", "cantidad": 300, "unidad": "g"}, {"nombre": "ziemniaki ugotowane", "cantidad": 300, "unidad": "g"}, {"nombre": "jajko", "cantidad": 55, "unidad": "g"}, {"nombre": "koperek", "cantidad": 10, "unidad": "g"}, {"nombre": "bułka tarta", "cantidad": 40, "unidad": "g"}, {"nombre": "olej rzepakowy", "cantidad": 25, "unidad": "g"}]}]</script>
+
+  <script>
+    (function () {
+      const recipes = JSON.parse(document.getElementById('recipes-data').textContent);
+      const recipeById = new Map(recipes.map((r) => [r.id, r]));
+      const dayKeys = ['pon', 'wt', 'sr', 'czw', 'pt'];
+      const defaultIds = ["muffinki-jajeczne-z-brokulem", "mini-pizze-na-tortilli-z-pomidorem", "wrap-z-kurczakiem-i-ogorkiem", "kanapka-z-pasta-jajeczna-i-szczypiorkiem", "slupki-marchewki-z-dipem-jogurtowym"];
+
+      const selects = dayKeys.map((k) => document.getElementById(`select-${k}`));
+      const shoppingBox = document.getElementById('shopping-list-text');
+
+      // Populate selects
+      selects.forEach((select, idx) => {
+        const emptyOpt = document.createElement('option');
+        emptyOpt.value = '';
+        emptyOpt.textContent = '— Wybierz przepis —';
+        select.appendChild(emptyOpt);
+
+        recipes.forEach((recipe) => {
+          const opt = document.createElement('option');
+          opt.value = recipe.id;
+          opt.textContent = `${recipe.nombre} (${recipe.minutos} min)`;
+          select.appendChild(opt);
+        });
+
+        select.value = defaultIds[idx] || '';
+        select.addEventListener('change', updatePlanner);
+      });
+
+      function renderMacros(dayKey, recipe) {
+        const box = document.getElementById(`macros-${dayKey}`);
+        if (!recipe) {
+          box.hidden = true;
+          box.textContent = '';
+          return;
+        }
+        box.hidden = false;
+        const allergensText = recipe.alergenos && recipe.alergenos.length
+          ? `Alergeny: ${recipe.alergenos.join(', ')}`
+          : 'Bez głównych alergenów';
+
+        box.innerHTML = `
+          <div class="macros-meta">
+            <span>⏱️ ${recipe.minutos} min</span>
+            <span>🍽️ ${recipe.porciones} porcje</span>
+            <span>🔥 ${recipe.kcal} kcal</span>
+          </div>
+          <div class="macros-grid">
+            <div class="macro-pill"><b>${recipe.proteina_g} g</b>Białko</div>
+            <div class="macro-pill"><b>${recipe.carbos_g} g</b>Węglow.</div>
+            <div class="macro-pill"><b>${recipe.azucar_g} g</b>Cukry</div>
+            <div class="macro-pill"><b>${recipe.grasa_g} g</b>Tłuszcze</div>
+            <div class="macro-pill"><b>${recipe.fibra_g} g</b>Błonnik</div>
+            <div class="macro-pill"><b>${recipe.kcal}</b>kcal</div>
+          </div>
+          <div class="allergen-note">${allergensText}</div>
+        `;
+      }
+
+      function updatePlanner() {
+        const totals = new Map();
+
+        dayKeys.forEach((dayKey, i) => {
+          const id = selects[i].value;
+          const recipe = recipeById.get(id);
+          renderMacros(dayKey, recipe);
+
+          if (!recipe) return;
+          recipe.ingredientes.forEach((ing) => {
+            const key = `${ing.nombre}__${ing.unidad}`;
+            const prev = totals.get(key);
+            if (prev) {
+              prev.cantidad += Number(ing.cantidad) || 0;
+            } else {
+              totals.set(key, {
+                nombre: ing.nombre,
+                cantidad: Number(ing.cantidad) || 0,
+                unidad: ing.unidad
+              });
+            }
+          });
+        });
+
+        if (totals.size === 0) {
+          shoppingBox.classList.add('shopping-empty');
+          shoppingBox.textContent = 'Wybierz co najmniej jeden przepis powyżej, aby wygenerować listę zakupów.';
+          return;
+        }
+
+        shoppingBox.classList.remove('shopping-empty');
+        const lines = Array.from(totals.values())
+          .sort((a, b) => a.nombre.localeCompare(b.nombre, 'pl'))
+          .map((item) => `• ${item.nombre}: ${item.cantidad} ${item.unidad}`);
+        shoppingBox.textContent = lines.join('\n');
+      }
+
+      document.getElementById('btn-random-week').addEventListener('click', () => {
+        const pool = [...recipes].sort(() => Math.random() - 0.5);
+        selects.forEach((sel, i) => {
+          sel.value = pool[i % pool.length].id;
+        });
+        updatePlanner();
+      });
+
+      document.getElementById('btn-clear-week').addEventListener('click', () => {
+        selects.forEach((sel) => {
+          sel.value = '';
+        });
+        updatePlanner();
+      });
+
+      document.getElementById('btn-print-list').addEventListener('click', () => {
+        window.print();
+      });
+
+      // Copy button logic (Invoker Commands + fallback + legacyCopy + VoiceOver dedupe)
+      const timers = new WeakMap();
+      let lastMessage = '';
+
+      function legacyCopy(text) {
+        const field = Object.assign(document.createElement('textarea'), { value: text });
+        field.setAttribute('readonly', '');
+        field.style.cssText = 'position:fixed;inset-block-start:0;opacity:0';
+        document.body.append(field);
+        field.select();
+        try {
+          return document.execCommand('copy');
+        } finally {
+          field.remove();
+        }
+      }
+
+      function report(button, ok) {
+        const tip = button.nextElementSibling;
+        clearTimeout(timers.get(button));
+        button.removeAttribute('data-copied');
+        button.removeAttribute('data-failed');
+        let message = ok ? 'Skopiowano listę!' : 'Nie udało się skopiować';
+        if (message === lastMessage) message += '\u00A0';
+        lastMessage = message;
+        tip.textContent = '';
+        void button.offsetWidth;
+        button.setAttribute(ok ? 'data-copied' : 'data-failed', '');
+        requestAnimationFrame(() => {
+          tip.textContent = message;
+        });
+        timers.set(button, setTimeout(() => {
+          button.removeAttribute('data-copied');
+          button.removeAttribute('data-failed');
+          tip.textContent = '';
+        }, 2200));
+      }
+
+      async function copy(button, target) {
+        if (target.classList.contains('shopping-empty')) {
+          report(button, false);
+          return;
+        }
+        const text = target.innerText.trim();
+        if (!text) return;
+        try {
+          await navigator.clipboard.writeText(text);
+          report(button, true);
+        } catch {
+          if (legacyCopy(text)) {
+            report(button, true);
+          } else {
+            report(button, false);
+          }
+        }
+      }
+
+      document.addEventListener('command', (event) => {
+        if (event.command === '--copy') copy(event.source, event.target);
+      }, true);
+
+      if (!('CommandEvent' in window)) {
+        document.addEventListener('click', (event) => {
+          const button = event.target.closest('button[command="--copy"]');
+          if (!button) return;
+          const target = document.getElementById(button.getAttribute('commandfor'));
+          if (target) copy(button, target);
+        });
+      }
+
+      updatePlanner();
+    })();
+  </script>
+</body>
+</html>
