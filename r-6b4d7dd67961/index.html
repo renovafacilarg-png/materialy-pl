@@ -1,0 +1,823 @@
+<!doctype html><html lang="pl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Śniadaniówka na Cały Rok Szkolny</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"><style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --creme: #FFF6E3;
+      --creme-dark: #F3E4C6;
+      --creme-line: #E8D6B3;
+      --marrom: #5A3522;
+      --marrom-light: #7A5540;
+      --marrom-soft: #9A7A64;
+      --laranja: #FF6B4A;
+      --laranja-dark: #D94B2B;
+      --laranja-soft: #FFE9E2;
+      --verde: #1E6B35;
+      --verde-dark: #17552A;
+      --garantia: #1A9940;
+      --preto: #1E1208;
+      --branco: #FFFFFF;
+      --r-sm: 12px;
+      --r-md: 18px;
+      --r-lg: 24px;
+      --r-xl: 30px;
+      --sh-1: 0 1px 3px rgba(90, 53, 34, .06), 0 4px 16px rgba(90, 53, 34, .06);
+      --sh-2: 0 2px 6px rgba(90, 53, 34, .07), 0 12px 32px rgba(90, 53, 34, .10);
+      --sh-3: 0 4px 12px rgba(90, 53, 34, .10), 0 20px 48px rgba(90, 53, 34, .14);
+      --px: 17px;
+    }
+
+    html {
+      font-size: 17px;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background: var(--creme);
+      color: var(--marrom);
+      line-height: 1.6;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 460px;
+      margin: 0 auto;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    h1, h2, h3, .section-title {
+      font-family: 'Bricolage Grotesque', 'Plus Jakarta Sans', system-ui, sans-serif;
+      letter-spacing: -.035em;
+      text-wrap: balance;
+    }
+
+    h1 {
+      font-size: clamp(30px, 8.6vw, 38px);
+      font-weight: 800;
+      line-height: 1.06;
+    }
+
+    h2 {
+      font-size: clamp(24px, 6.8vw, 30px);
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    h3 {
+      font-weight: 800;
+    }
+
+    p {
+      text-wrap: pretty;
+    }
+
+    em {
+      font-style: normal;
+      background-image: linear-gradient(transparent 60%, rgba(255, 107, 74, .3) 60%);
+      color: var(--marrom);
+      padding: 0 2px;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--laranja-dark);
+      outline-offset: 2px;
+    }
+
+    /* Top bar */
+    .top-bar {
+      background: var(--laranja);
+      color: #fff;
+      text-align: center;
+      padding: 11px var(--px);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      line-height: 1.4;
+    }
+
+    .top-dot {
+      width: 6px;
+      height: 6px;
+      background: rgba(255, 255, 255, .75);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      min-height: 48px;
+      background: var(--verde);
+      background-image: linear-gradient(180deg, rgba(255, 255, 255, .14), rgba(255, 255, 255, 0));
+      color: #fff;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 800;
+      padding: 16px 18px;
+      border-radius: 999px;
+      border: 2px solid var(--marrom);
+      box-shadow: 3px 3px 0 var(--marrom);
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      line-height: 1.25;
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+
+    .btn:hover {
+      transform: translate(1px, 1px);
+      box-shadow: 1px 1px 0 var(--marrom);
+    }
+
+    .btn:active {
+      transform: scale(.98);
+    }
+
+    .btn-laranja {
+      background-color: var(--laranja);
+      background-image: linear-gradient(180deg, rgba(255, 255, 255, .2), rgba(255, 255, 255, 0));
+      color: #fff;
+    }
+
+    .btn-creme {
+      background: var(--creme);
+      color: var(--marrom);
+      background-image: none;
+    }
+
+    .btn-sm {
+      min-height: 44px;
+      padding: 12px 16px;
+      font-size: 13.5px;
+    }
+
+    /* Sections */
+    section {
+      padding: 48px var(--px);
+    }
+
+    .section-dark {
+      background: radial-gradient(120% 60% at 100% 0%, #7A4B30 0%, var(--marrom) 60%);
+      color: #fff;
+      border-radius: 34px 34px 0 0;
+      margin-top: -28px;
+      position: relative;
+      z-index: 1;
+      padding-top: 56px;
+      padding-bottom: 68px;
+    }
+
+    .section-light {
+      background: var(--creme);
+      border-radius: 34px 34px 0 0;
+      margin-top: -28px;
+      position: relative;
+      z-index: 1;
+      padding-top: 56px;
+      padding-bottom: 68px;
+    }
+
+    .eyebrow {
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--laranja-dark);
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .section-dark .eyebrow {
+      color: rgba(255, 255, 255, .68);
+    }
+
+    /* 1. Bienvenida */
+    .welcome {
+      padding: 34px var(--px) 58px;
+      text-align: center;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    }
+
+    .welcome::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      left: -25%;
+      right: -25%;
+      top: -60px;
+      height: 360px;
+      background: radial-gradient(closest-side, rgba(255, 107, 74, .25), rgba(255, 107, 74, 0));
+    }
+
+    .confirm-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--verde);
+      color: #fff;
+      font-size: 12.5px;
+      font-weight: 800;
+      padding: 8px 16px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 12px -6px rgba(30, 107, 53, .6);
+    }
+
+    .welcome h1 {
+      margin-bottom: 14px;
+    }
+
+    .welcome-sub {
+      font-size: 15.5px;
+      color: var(--marrom-light);
+      line-height: 1.65;
+      margin-bottom: 26px;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .step-card {
+      background: var(--branco);
+      border: 1px solid var(--creme-line);
+      border-radius: var(--r-md);
+      padding: 14px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      box-shadow: var(--sh-1);
+    }
+
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--laranja);
+      color: #fff;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .step-card > div {
+      min-width: 0;
+    }
+
+    .step-card h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--marrom);
+      margin-bottom: 2px;
+    }
+
+    .step-card p {
+      font-size: 13.5px;
+      color: var(--marrom-light);
+      line-height: 1.5;
+    }
+
+    /* 2. Producto principal */
+    .main-product {
+      text-align: center;
+    }
+
+    .main-card {
+      background: var(--creme);
+      color: var(--marrom);
+      border-radius: var(--r-xl);
+      padding: 24px 20px 26px;
+      box-shadow: var(--sh-3);
+      border: 2px solid var(--marrom);
+    }
+
+    .main-cover {
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto 18px;
+      border-radius: var(--r-md);
+      border: 2px solid var(--marrom);
+      box-shadow: 5px 5px 0 var(--laranja);
+      background: var(--branco);
+    }
+
+    .main-card h2 {
+      margin-bottom: 8px;
+    }
+
+    .main-card p {
+      font-size: 14.5px;
+      color: var(--marrom-light);
+      margin-bottom: 20px;
+    }
+
+    .btn-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* 3. Bonos */
+    .bonuses-section {
+      text-align: center;
+    }
+
+    .bonuses-section h2 {
+      margin-bottom: 8px;
+    }
+
+    .section-lead {
+      font-size: 15px;
+      color: var(--marrom-light);
+      margin-bottom: 24px;
+    }
+
+    .section-dark .section-lead {
+      color: rgba(255, 255, 255, .78);
+    }
+
+    .bonus-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .bonus-card {
+      background: var(--branco);
+      border: 1px solid var(--creme-line);
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      box-shadow: var(--sh-2);
+      text-align: left;
+    }
+
+    .bonus-img-wrap {
+      background: var(--creme-dark);
+      padding: 14px 14px 0;
+      border-bottom: 1px solid var(--creme-line);
+    }
+
+    .bonus-img-wrap img {
+      width: 100%;
+      height: 210px;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+
+    .bonus-body {
+      padding: 18px 20px 22px;
+      text-align: center;
+    }
+
+    .bonus-tag {
+      display: inline-block;
+      background: var(--laranja);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .bonus-body h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16.5px;
+      font-weight: 800;
+      color: var(--marrom);
+      line-height: 1.32;
+      margin-bottom: 14px;
+    }
+
+    /* 4. Menus semanales */
+    .menus-section {
+      text-align: center;
+    }
+
+    .menus-section h2 {
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      text-align: left;
+    }
+
+    .menu-card {
+      background: var(--creme);
+      color: var(--marrom);
+      border-radius: var(--r-lg);
+      padding: 18px 18px 20px;
+      border: 2px solid var(--marrom);
+      box-shadow: 4px 4px 0 var(--laranja);
+    }
+
+    .menu-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .menu-badge {
+      background: var(--laranja-soft);
+      color: var(--laranja-dark);
+      font-size: 11.5px;
+      font-weight: 800;
+      padding: 4px 11px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .menu-card h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 17px;
+      margin-bottom: 6px;
+    }
+
+    .menu-card p {
+      font-size: 13.5px;
+      color: var(--marrom-light);
+      margin-bottom: 14px;
+    }
+
+    /* 5. Planificador interactivo */
+    .planner-section {
+      text-align: center;
+    }
+
+    .planner-section h2 {
+      margin-bottom: 8px;
+    }
+
+    .planner-box {
+      background: var(--branco);
+      border: 2px solid var(--marrom);
+      border-radius: var(--r-xl);
+      padding: 20px 16px 22px;
+      box-shadow: 6px 6px 0 var(--laranja);
+      text-align: left;
+    }
+
+    .planner-actions-top {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .day-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      padding: 14px 0;
+      border-bottom: 1px solid var(--creme-line);
+    }
+
+    .day-row:last-of-type {
+      border-bottom: none;
+    }
+
+    .day-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--marrom);
+      margin-bottom: 6px;
+    }
+
+    .day-select {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      min-height: 48px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font: inherit;
+      font-size: max(1rem, 1em);
+      font-weight: 600;
+      color: var(--marrom);
+      background: var(--creme);
+      border: 1.5px solid var(--marrom);
+      border-radius: var(--r-sm);
+      padding: 10px 12px;
+      cursor: pointer;
+    }
+
+    .macros-box {
+      margin-top: 10px;
+      background: var(--laranja-soft);
+      border: 1px solid var(--creme-line);
+      border-radius: var(--r-sm);
+      padding: 10px 12px;
+      font-size: 12.5px;
+      color: var(--marrom);
+    }
+
+    .macros-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 12px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .macros-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    .macro-pill {
+      background: var(--branco);
+      border: 1px solid var(--creme-line);
+      border-radius: 8px;
+      padding: 5px 7px;
+      text-align: center;
+      font-size: 11.5px;
+      line-height: 1.3;
+    }
+
+    .macro-pill b {
+      display: block;
+      font-size: 13px;
+      color: var(--marrom);
+    }
+
+    .allergen-note {
+      margin-top: 7px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--laranja-dark);
+    }
+
+    .shopping-wrap {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 2px dashed var(--creme-line);
+    }
+
+    .shopping-wrap h3 {
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .shopping-hint {
+      font-size: 13px;
+      color: var(--marrom-light);
+      margin-bottom: 12px;
+    }
+
+    .shopping-list-box {
+      background: var(--creme);
+      border: 1px solid var(--creme-line);
+      border-radius: var(--r-md);
+      padding: 14px 16px;
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--marrom);
+      margin-bottom: 14px;
+      white-space: pre-line;
+    }
+
+    .shopping-empty {
+      color: var(--marrom-soft);
+      font-style: italic;
+    }
+
+    .copy-wrap {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .copy-status {
+      min-height: 22px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--verde);
+      text-align: center;
+      opacity: 0;
+      transition: opacity .15s ease;
+    }
+
+    .copy-button[data-copied] + .copy-status,
+    .copy-button[data-failed] + .copy-status {
+      opacity: 1;
+    }
+
+    .copy-button[data-failed] + .copy-status {
+      color: var(--laranja-dark);
+    }
+
+    /* 6. Actualizaciones mensuales */
+    .updates-section {
+      text-align: center;
+    }
+
+    .updates-card {
+      background: var(--creme);
+      color: var(--marrom);
+      border-radius: var(--r-xl);
+      padding: 26px 22px;
+      border: 2px solid var(--marrom);
+      box-shadow: var(--sh-3);
+    }
+
+    .updates-ico {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .updates-card h2 {
+      margin-bottom: 10px;
+    }
+
+    .updates-card p {
+      font-size: 15px;
+      color: var(--marrom-light);
+      line-height: 1.65;
+    }
+
+    /* 7. Ayuda / Garantia */
+    .help-section {
+      background: var(--garantia);
+      color: #fff;
+      border-radius: 34px 34px 0 0;
+      margin-top: -28px;
+      position: relative;
+      z-index: 1;
+      padding: 56px var(--px) 64px;
+      text-align: center;
+    }
+
+    .garantia-selo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, .16);
+      border: 1.5px solid rgba(255, 255, 255, .35);
+      border-radius: 999px;
+      padding: 8px 18px;
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .help-section h2 {
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    .help-section p {
+      font-size: 15px;
+      color: rgba(255, 255, 255, .92);
+      line-height: 1.68;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .contact-box {
+      background: rgba(255, 255, 255, .14);
+      border: 1.5px solid rgba(255, 255, 255, .28);
+      border-radius: var(--r-md);
+      padding: 18px 16px;
+      text-align: center;
+    }
+
+    .contact-box span {
+      display: block;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .8);
+      margin-bottom: 6px;
+    }
+
+    .contact-mail {
+      display: inline-block;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 800;
+      text-decoration: underline;
+      word-break: break-all;
+    }
+
+    footer {
+      background: var(--preto);
+      color: rgba(255, 255, 255, .52);
+      font-size: 12.5px;
+      text-align: center;
+      padding: 36px 20px;
+      line-height: 1.8;
+    }
+
+    footer strong {
+      color: rgba(255, 255, 255, .82);
+    }
+
+    @media (min-width: 760px) {
+      .menu-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @media print {
+      body {
+        max-width: 100%;
+        background: #fff;
+        color: #000;
+      }
+      .top-bar, .welcome, .main-product, .bonuses-section, .menus-section,
+      .updates-section, .help-section, footer, .planner-actions-top, .copy-wrap {
+        display: none !important;
+      }
+      .planner-section {
+        margin: 0;
+        padding: 0;
+        background: #fff;
+      }
+      .planner-box {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+      }
+    }
+  .btn-ghost{background:transparent!important;color:inherit!important;border:2px solid currentColor!important;opacity:.85;margin-top:8px}
+.rok-box{background:#fff;border-radius:18px;padding:20px;box-shadow:var(--sh-1);margin:18px var(--px)}
+.rok-box img{border-radius:14px;margin:0 auto 16px;max-height:340px}
+.rok-box .btn{margin-top:10px} .rok-list{margin:10px 0 0 20px} .rok-list li{margin:6px 0}
+.rok-help{text-align:center;font-size:14px;color:var(--marrom-soft);padding:10px var(--px) 34px}</style></head>
+<body>
+<div class="top-bar"><span class="top-dot" aria-hidden="true"></span><span>DOSTĘP ODBLOKOWANY · WESOŁE ŚNIADANIÓWKI</span><span class="top-dot" aria-hidden="true"></span></div>
+<section class="welcome">
+<div class="confirm-pill">✓ Twoje zamówienie jest potwierdzone</div>
+<h1>Twój plan <em>na cały rok szkolny</em> jest gotowy!</h1>
+<p class="welcome-sub">Koniec z wieczornym „co jutro do śniadaniówki?”. Tydzień po tygodniu, od września do czerwca.</p>
+</section>
+<div class="rok-box">
+<img src="okladka.jpg" alt="Śniadaniówka na Cały Rok Szkolny">
+<h2>Śniadaniówka na Cały Rok Szkolny</h2>
+<ul class="rok-list">
+<li>40 tygodniowych jadłospisów — 200 zestawów do śniadaniówki, już zaplanowanych</li>
+<li>40 list zakupów — po jednej na każdy tydzień</li>
+<li>10 arkuszy „niedziela w 45 minut”: co przygotować wcześniej, żeby rano było szybko</li>
+<li>10 kalendarzy do wydrukowania, żeby dziecko samo wybierało, co chce do śniadaniówki</li>
+</ul>
+<a class="btn btn-laranja" href="czytaj/">📖 Czytaj online</a>
+<a class="btn btn-ghost" href="pdf/Sniadaniowka-na-Caly-Rok.pdf" download>⬇️ Pobierz PDF</a>
+</div>
+<p class="rok-help">Potrzebujesz pomocy? Napisz: getsentia@gmail.com</p>
+</body></html>
